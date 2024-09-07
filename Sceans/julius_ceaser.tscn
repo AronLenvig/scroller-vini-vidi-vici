@@ -5,17 +5,15 @@
 [ext_resource type="Script" path="res://scripts/collision_shape_2d.gd" id="3_vgdhw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_etkox"]
-radius = 46.0
+radius = 26.0192
 
 [node name="julius_ceaser" type="CharacterBody2D"]
 script = ExtResource("1_033tt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-2, -2.99997)
-scale = Vector2(0.664062, 0.664062)
+scale = Vector2(0.347656, 0.347656)
 texture = ExtResource("1_ru5ua")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_etkox")
 script = ExtResource("3_vgdhw")
