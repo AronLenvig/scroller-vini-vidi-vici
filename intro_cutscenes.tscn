@@ -1,0 +1,258 @@
+[gd_scene load_steps=10 format=3 uid="uid://c8pivujqfxfma"]
+
+[ext_resource type="Script" path="res://intro_cutscene.gd" id="1_72kbv"]
+[ext_resource type="Texture2D" uid="uid://c5hxptce16fdy" path="res://picturs_for_intro/purepng-business-man.png" id="2_i2uno"]
+
+[sub_resource type="Animation" id="Animation_d8dm6"]
+resource_name = "start_cutscean"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pictur_1/sprite_1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("pictur_5/sprite_5:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.5, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("pictur_4/sprite_4:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("pictur_3/sprite_3:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(4.5, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("pictur_2/sprite_2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(6, 6.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_2oc6t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pictur_1/sprite_1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("pictur_5/sprite_5:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("pictur_4/sprite_4:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("pictur_3/sprite_3:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("pictur_2/sprite_2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_o3hnm"]
+resource_name = "pic_2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pictur_5/sprite_5:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_oswye"]
+resource_name = "pic_3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pictur_4/sprite_4:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_58cn7"]
+resource_name = "pic_4"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pictur_3/sprite_3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_040a4"]
+resource_name = "pic_5"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pictur_2/sprite_2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qp53b"]
+_data = {
+"RESET": SubResource("Animation_2oc6t"),
+"pic_2": SubResource("Animation_o3hnm"),
+"pic_3": SubResource("Animation_oswye"),
+"pic_4": SubResource("Animation_58cn7"),
+"pic_5": SubResource("Animation_040a4"),
+"start_cutscean": SubResource("Animation_d8dm6")
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_72kbv")
+
+[node name="pictur_1" type="Node2D" parent="."]
+
+[node name="sprite_1" type="Sprite2D" parent="pictur_1"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(148, 183)
+scale = Vector2(1.04286, 0.811659)
+texture = ExtResource("2_i2uno")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qp53b")
+}
+
+[node name="BackGround" type="ColorRect" parent="."]
+z_index = -100
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="pictur_2" type="Node2D" parent="."]
+
+[node name="sprite_2" type="Sprite2D" parent="pictur_2"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(311, 931)
+scale = Vector2(2.12857, 0.811659)
+texture = ExtResource("2_i2uno")
+
+[node name="pictur_3" type="Node2D" parent="."]
+
+[node name="sprite_3" type="Sprite2D" parent="pictur_3"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(449, 556)
+scale = Vector2(1.04286, 0.811659)
+texture = ExtResource("2_i2uno")
+
+[node name="pictur_4" type="Node2D" parent="."]
+
+[node name="sprite_4" type="Sprite2D" parent="pictur_4"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(149, 542)
+scale = Vector2(1.04286, 0.811659)
+texture = ExtResource("2_i2uno")
+
+[node name="pictur_5" type="Node2D" parent="."]
+
+[node name="sprite_5" type="Sprite2D" parent="pictur_5"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(448, 183)
+scale = Vector2(1.04286, 0.811659)
+texture = ExtResource("2_i2uno")
