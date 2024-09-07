@@ -9,8 +9,8 @@ var increment_interval: float = 3.0
 var lable_funct = [
 	["+100", "add100"],
 	["-100", "sub100"],
-	["*2", "ganga2"],
-	["/2", "div2"],
+	["x 2", "ganga2"],
+	["÷ 2", "div2"],
 	["-69", "sub69"],
 ]
 

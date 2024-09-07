@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/add_point.gd" id="1_q38xb"]
 [ext_resource type="Script" path="res://scripts/area_2d.gd" id="1_vgiw3"]
-[ext_resource type="Texture2D" uid="uid://bpy4mevtiki4m" path="res://picturs/Point gain.png" id="2_hhgfi"]
+[ext_resource type="Texture2D" uid="uid://b4mgj5efvar1f" path="res://picturs/point.png" id="3_r12kp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f2sxk"]
 radius = 199.161
@@ -24,7 +24,8 @@ shape = SubResource("CircleShape2D_f2sxk")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 position = Vector2(0, 4.99997)
-texture = ExtResource("2_hhgfi")
+scale = Vector2(1.59447, 1.59222)
+texture = ExtResource("3_r12kp")
 
 [node name="Label" type="Label" parent="Area2D"]
 offset_left = -202.0
