@@ -1,12 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://df7hr62kx7yog"]
+[gd_scene load_steps=9 format=3 uid="uid://df7hr62kx7yog"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_3ws5d"]
 [ext_resource type="PackedScene" uid="uid://dlbfj8pvfx6jv" path="res://Sceans/julius_ceaser.tscn" id="2_6ixn7"]
 [ext_resource type="Script" path="res://scripts/soilders_count.gd" id="3_7x8em"]
+[ext_resource type="Script" path="res://Sceans/cleopatra_count.gd" id="4_3s66u"]
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="4_qkqte"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blslf"]
 size = Vector2(25, 1200)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wv12q"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_hqfe7"]
+font_size = 24
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_3ws5d")
@@ -47,7 +54,29 @@ offset_right = 94.5
 offset_bottom = -30.0
 grow_horizontal = 2
 grow_vertical = 0
+text = "asd"
+label_settings = SubResource("LabelSettings_wv12q")
+horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("3_7x8em")
+
+[node name="cleopatra_count" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.982
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -297.5
+offset_top = -36.238
+offset_right = -108.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "gay"
+label_settings = SubResource("LabelSettings_hqfe7")
+horizontal_alignment = 1
+script = ExtResource("4_3s66u")
 
 [node name="Spawner" type="Node2D" parent="."]
 position = Vector2(303, -62)
