@@ -10,8 +10,6 @@ extends CanvasLayer
 func _input(event: InputEvent) -> void:
 	if event.is_action("Skip_sceness "):
 		animation_player.stop()
-		Transition.transition()
-		await Transition.on_tansition_finished
 		get_tree().change_scene_to_file("res://main.tscn")
 		
 func start_introcutscean():
