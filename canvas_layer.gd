@@ -10,7 +10,6 @@ var victory_reweld
 
 func _ready() -> void:
 	amount_labe.visible = false
-	Global.soldiers = 3000
 	score.text = "0 :Soldiers"
 	Kleo.text = "0 :Cleopatras"
 	update_score()
@@ -26,14 +25,15 @@ func update_score() -> void:
 	var shown_kleo = 0
 	while shown_score < Global.soldiers:
 		shown_score += min(100,Global.soldiers - shown_score)
-		score.text = str(shown_score) + " :Soldiers"
+		score.text = str(shown_score) + " Soldiers"
 		await get_tree().create_timer(0.02).timeout
 	while shown_kleo < Global.cleopatras:
 		shown_kleo += min(1,Global.cleopatras - shown_kleo)
-		Kleo.text = str(shown_kleo) + " :Cleopatras"
+		Kleo.text = str(shown_kleo) + "/5 Cleopatras"
 		await get_tree().create_timer(0.1).timeout
 	await  get_tree().create_timer(0.5).timeout
 	animation_player.play("Points_tally")
+	
 	if victory_reweld:
 		pass
 	else:

@@ -1,10 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://df7hr62kx7yog"]
+[gd_scene load_steps=9 format=3 uid="uid://df7hr62kx7yog"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_3ws5d"]
 [ext_resource type="PackedScene" uid="uid://dlbfj8pvfx6jv" path="res://Sceans/julius_ceaser.tscn" id="2_6ixn7"]
-[ext_resource type="Texture2D" uid="uid://bbq5xs2sg6dh3" path="res://picturs/wall.jpg" id="2_ms6xi"]
 [ext_resource type="Script" path="res://scripts/soilders_count.gd" id="3_7x8em"]
-[ext_resource type="Script" path="res://scripts/cleopatra_count.gd" id="4_3s66u"]
+[ext_resource type="Script" path="res://Sceans/cleopatra_count.gd" id="4_3s66u"]
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="4_qkqte"]
 [ext_resource type="Script" path="res://Sceans/timer.gd" id="6_iqk2k"]
 [ext_resource type="AudioStream" uid="uid://c7yk3bsftpw00" path="res://audio/Blonde.mp3" id="7_7nwj7"]
@@ -36,22 +35,12 @@ position = Vector2(0, 1)
 position = Vector2(2.5, 600)
 shape = SubResource("RectangleShape2D_blslf")
 
-[node name="Sprite2D" type="Sprite2D" parent="left_wall"]
-position = Vector2(2, 588)
-scale = Vector2(0.431065, 24.32)
-texture = ExtResource("2_ms6xi")
-
 [node name="right_wall" type="StaticBody2D" parent="."]
 position = Vector2(594, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="right_wall"]
 position = Vector2(2.5, 600)
 shape = SubResource("RectangleShape2D_blslf")
-
-[node name="Sprite2D" type="Sprite2D" parent="right_wall"]
-position = Vector2(2, 588)
-scale = Vector2(0.431065, 24.32)
-texture = ExtResource("2_ms6xi")
 
 [node name="julius_ceasar" parent="." groups=["player"] instance=ExtResource("2_6ixn7")]
 position = Vector2(302, 1012)
@@ -69,10 +58,10 @@ anchor_left = 0.5
 anchor_top = 0.982
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -94.5
-offset_top = -86.238
-offset_right = 94.5
-offset_bottom = -30.0
+offset_left = -96.5
+offset_top = -157.238
+offset_right = 92.5
+offset_bottom = -101.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "asd"
@@ -88,10 +77,10 @@ anchor_left = 0.5
 anchor_top = 0.982
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -297.5
-offset_top = -36.238
-offset_right = -108.5
-offset_bottom = 20.0
+offset_left = -289.5
+offset_top = -126.238
+offset_right = -100.5
+offset_bottom = -70.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "gay"

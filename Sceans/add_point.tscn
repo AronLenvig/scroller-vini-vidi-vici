@@ -11,7 +11,7 @@ radius = 199.161
 font_size = 100
 outline_size = 2
 
-[node name="add_point" type="Node2D"]
+[node name="add_point" type="Node2D" groups=["Enemy"]]
 script = ExtResource("1_q38xb")
 
 [node name="Area2D" type="Area2D" parent="."]

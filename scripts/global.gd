@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 		timer += delta
 	
 	if time_passed >= increment_interval:
-		game_speed += 1
+		game_speed += 10
 		time_passed = 0.0  # Reset the timer
 		
 		#print("Game speed increased: ", game_speed)

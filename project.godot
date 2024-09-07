@@ -28,6 +28,7 @@ window/size/viewport_height=1200
 [global_group]
 
 player="player"
+Enemy=""
 
 [input]
 
