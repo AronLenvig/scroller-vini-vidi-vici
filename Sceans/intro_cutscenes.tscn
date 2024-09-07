@@ -1,7 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://c8pivujqfxfma"]
+[gd_scene load_steps=14 format=3 uid="uid://c8pivujqfxfma"]
 
 [ext_resource type="Script" path="res://scripts/intro_cutscene.gd" id="1_2g20n"]
 [ext_resource type="Texture2D" uid="uid://c5hxptce16fdy" path="res://picturs/picturs_for_cutsceness/purepng-business-man.png" id="2_dgmq4"]
+[ext_resource type="Texture2D" uid="uid://7kspsop4yaxa" path="res://picturs/Cesar_normal.png" id="2_ycc8w"]
+[ext_resource type="Texture2D" uid="uid://cwdhwkiv2743s" path="res://picturs/Untitled275.png" id="4_xaeya"]
+[ext_resource type="Texture2D" uid="uid://ddhgt2lm6teda" path="res://picturs/Untitled274.png" id="5_g0g67"]
+[ext_resource type="Texture2D" uid="uid://b6iovehil50vw" path="res://picturs/Untitled273.png" id="6_t6nkr"]
 
 [sub_resource type="Animation" id="Animation_2oc6t"]
 length = 0.001
@@ -207,9 +211,8 @@ script = ExtResource("1_2g20n")
 
 [node name="sprite_1" type="Sprite2D" parent="pictur_1"]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(148, 183)
-scale = Vector2(1.04286, 0.811659)
-texture = ExtResource("2_dgmq4")
+position = Vector2(150, 200)
+texture = ExtResource("2_ycc8w")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -221,6 +224,8 @@ z_index = -100
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
@@ -229,7 +234,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="sprite_2" type="Sprite2D" parent="pictur_2"]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(311, 931)
+position = Vector2(298, 1016)
 scale = Vector2(2.12857, 0.811659)
 texture = ExtResource("2_dgmq4")
 
@@ -237,22 +242,19 @@ texture = ExtResource("2_dgmq4")
 
 [node name="sprite_3" type="Sprite2D" parent="pictur_3"]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(449, 556)
-scale = Vector2(1.04286, 0.811659)
-texture = ExtResource("2_dgmq4")
+position = Vector2(450, 600)
+texture = ExtResource("4_xaeya")
 
 [node name="pictur_4" type="Node2D" parent="."]
 
 [node name="sprite_4" type="Sprite2D" parent="pictur_4"]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(149, 542)
-scale = Vector2(1.04286, 0.811659)
-texture = ExtResource("2_dgmq4")
+position = Vector2(150, 600)
+texture = ExtResource("5_g0g67")
 
 [node name="pictur_5" type="Node2D" parent="."]
 
 [node name="sprite_5" type="Sprite2D" parent="pictur_5"]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(448, 183)
-scale = Vector2(1.04286, 0.811659)
-texture = ExtResource("2_dgmq4")
+position = Vector2(450, 200)
+texture = ExtResource("6_t6nkr")
