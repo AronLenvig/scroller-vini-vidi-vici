@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://c7kj225bsf85e"]
 
-[ext_resource type="Script" path="res://add_point.gd" id="1_q38xb"]
-[ext_resource type="Script" path="res://area_2d.gd" id="1_vgiw3"]
-[ext_resource type="Texture2D" uid="uid://bpy4mevtiki4m" path="res://Point gain.png" id="2_hhgfi"]
+[ext_resource type="Script" path="res://scripts/add_point.gd" id="1_q38xb"]
+[ext_resource type="Script" path="res://scripts/area_2d.gd" id="1_vgiw3"]
+[ext_resource type="Texture2D" uid="uid://bpy4mevtiki4m" path="res://picturs/Point gain.png" id="2_hhgfi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f2sxk"]
 radius = 199.161

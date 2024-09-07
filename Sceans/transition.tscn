@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://3bsoe7ypy3xo"]
 
-[ext_resource type="Script" path="res://canvas_layer.gd" id="1_c0iue"]
+[ext_resource type="Script" path="res://scripts/canvas_layer.gd" id="1_b0vpa"]
 
 [sub_resource type="Animation" id="Animation_psk3h"]
 length = 0.001
@@ -57,7 +57,7 @@ _data = {
 }
 
 [node name="CanvasLayer2" type="CanvasLayer"]
-script = ExtResource("1_c0iue")
+script = ExtResource("1_b0vpa")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15

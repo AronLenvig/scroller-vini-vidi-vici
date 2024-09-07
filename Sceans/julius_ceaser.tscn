@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dlbfj8pvfx6jv"]
 
-[ext_resource type="Script" path="res://julius_ceaser.gd" id="1_033tt"]
-[ext_resource type="Texture2D" uid="uid://dt3qrhvuh7dd3" path="res://icon.svg" id="1_ru5ua"]
-[ext_resource type="Script" path="res://collision_shape_2d.gd" id="3_vgdhw"]
+[ext_resource type="Script" path="res://scripts/julius_ceaser.gd" id="1_033tt"]
+[ext_resource type="Texture2D" uid="uid://dt3qrhvuh7dd3" path="res://picturs/icon.svg" id="1_ru5ua"]
+[ext_resource type="Script" path="res://scripts/collision_shape_2d.gd" id="3_vgdhw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_etkox"]
 radius = 46.0

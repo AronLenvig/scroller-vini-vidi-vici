@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dd7jhji0t7m7d"]
 
-[ext_resource type="Texture2D" uid="uid://bpy4mevtiki4m" path="res://Point gain.png" id="1_un8k4"]
+[ext_resource type="Texture2D" uid="uid://bpy4mevtiki4m" path="res://picturs/Point gain.png" id="1_un8k4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uowmn"]
 radius = 198.0

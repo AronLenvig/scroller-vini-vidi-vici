@@ -1,15 +1,15 @@
 [gd_scene load_steps=6 format=3 uid="uid://df7hr62kx7yog"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_a6ui1"]
-[ext_resource type="PackedScene" uid="uid://dlbfj8pvfx6jv" path="res://julius_ceaser.tscn" id="1_hjvfl"]
-[ext_resource type="Script" path="res://soilders_count.gd" id="5_k72wd"]
-[ext_resource type="Script" path="res://spawner.gd" id="6_hcbcr"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_3ws5d"]
+[ext_resource type="PackedScene" uid="uid://dlbfj8pvfx6jv" path="res://Sceans/julius_ceaser.tscn" id="2_6ixn7"]
+[ext_resource type="Script" path="res://scripts/soilders_count.gd" id="3_7x8em"]
+[ext_resource type="Script" path="res://scripts/spawner.gd" id="4_qkqte"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blslf"]
 size = Vector2(25, 1200)
 
 [node name="main" type="Node2D"]
-script = ExtResource("1_a6ui1")
+script = ExtResource("1_3ws5d")
 
 [node name="left_wall" type="StaticBody2D" parent="."]
 position = Vector2(0, 1)
@@ -25,7 +25,7 @@ position = Vector2(594, 3)
 position = Vector2(2.5, 600)
 shape = SubResource("RectangleShape2D_blslf")
 
-[node name="julius_ceasar" parent="." groups=["player"] instance=ExtResource("1_hjvfl")]
+[node name="julius_ceasar" parent="." groups=["player"] instance=ExtResource("2_6ixn7")]
 position = Vector2(302, 1012)
 
 [node name="Control" type="Control" parent="."]
@@ -47,8 +47,8 @@ offset_right = 94.5
 offset_bottom = -30.0
 grow_horizontal = 2
 grow_vertical = 0
-script = ExtResource("5_k72wd")
+script = ExtResource("3_7x8em")
 
 [node name="Spawner" type="Node2D" parent="."]
 position = Vector2(303, -62)
-script = ExtResource("6_hcbcr")
+script = ExtResource("4_qkqte")
