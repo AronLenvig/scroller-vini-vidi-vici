@@ -29,7 +29,7 @@ func _physics_process(delta: float) -> void:
 		spawn_point_gain(Vector2(0,0))
 	
 	velocity.x = direction.x * speed
-	velocity.y = direction.y * speed
+	#velocity.y = direction.y * speed
 	
 	# when hitting the wall ignore
 	move_and_slide()

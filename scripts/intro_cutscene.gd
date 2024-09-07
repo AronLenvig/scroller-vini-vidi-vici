@@ -11,16 +11,12 @@ func _input(event: InputEvent) -> void:
 	if event.is_action("Skip_sceness "):
 		animation_player.stop()
 		get_tree().change_scene_to_file("res://Sceans/main.tscn")
+		Global.game_start = true
 		
 func start_introcutscean():
 	animation_player.play("start_cutscean")
-	animation_player.animation_finished.connect(_animation_over)
+	#ToDO space to move between scenes
 	
-func _animation_over(animation_name):
-	Transition.transition()
-	await Transition.on_tansition_finished
-	get_tree().change_scene_to_file("res://Sceans/main.tscn")
-
 func _ready() -> void:
 	start_introcutscean()
 	

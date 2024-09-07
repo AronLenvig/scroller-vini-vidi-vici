@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://df7hr62kx7yog"]
+[gd_scene load_steps=15 format=3 uid="uid://df7hr62kx7yog"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_3ws5d"]
 [ext_resource type="PackedScene" uid="uid://dlbfj8pvfx6jv" path="res://Sceans/julius_ceaser.tscn" id="2_6ixn7"]
@@ -6,6 +6,9 @@
 [ext_resource type="Script" path="res://scripts/soilders_count.gd" id="3_7x8em"]
 [ext_resource type="Script" path="res://scripts/cleopatra_count.gd" id="4_3s66u"]
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="4_qkqte"]
+[ext_resource type="Script" path="res://Sceans/timer.gd" id="6_iqk2k"]
+[ext_resource type="AudioStream" uid="uid://c7yk3bsftpw00" path="res://audio/Blonde.mp3" id="7_7nwj7"]
+[ext_resource type="Script" path="res://scripts/audio_stream_player.gd" id="8_tclwt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blslf"]
 size = Vector2(25, 1200)
@@ -15,6 +18,13 @@ font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_hqfe7"]
 font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_n4ukq"]
+line_spacing = 0.0
+font_size = 54
+
+[sub_resource type="LabelSettings" id="LabelSettings_yr01d"]
+font_size = 26
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_3ws5d")
@@ -89,6 +99,32 @@ label_settings = SubResource("LabelSettings_hqfe7")
 horizontal_alignment = 1
 script = ExtResource("4_3s66u")
 
+[node name="timer" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 70.0
+offset_right = 448.0
+offset_bottom = 145.0
+text = "60"
+label_settings = SubResource("LabelSettings_n4ukq")
+horizontal_alignment = 1
+script = ExtResource("6_iqk2k")
+
+[node name="Label" type="Label" parent="Control"]
+modulate = Color(1, 1, 1, 0.658824)
+layout_mode = 0
+offset_left = 217.0
+offset_top = 34.0
+offset_right = 334.0
+offset_bottom = 70.0
+text = "Time Left"
+label_settings = SubResource("LabelSettings_yr01d")
+
 [node name="Spawner" type="Node2D" parent="."]
 position = Vector2(303, -62)
 script = ExtResource("4_qkqte")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_7nwj7")
+autoplay = true
+script = ExtResource("8_tclwt")

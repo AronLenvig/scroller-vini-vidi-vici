@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c8pivujqfxfma"]
+[gd_scene load_steps=15 format=3 uid="uid://c8pivujqfxfma"]
 
 [ext_resource type="Script" path="res://scripts/intro_cutscene.gd" id="1_2g20n"]
 [ext_resource type="Texture2D" uid="uid://c5hxptce16fdy" path="res://picturs/picturs_for_cutsceness/purepng-business-man.png" id="2_dgmq4"]
@@ -204,6 +204,11 @@ _data = {
 "start_cutscean": SubResource("Animation_d8dm6")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_nau5g"]
+line_spacing = 0.0
+font_size = 18
+font_color = Color(0, 0, 0, 1)
+
 [node name="CanvasLayer2" type="CanvasLayer"]
 script = ExtResource("1_2g20n")
 
@@ -251,6 +256,17 @@ texture = ExtResource("4_xaeya")
 modulate = Color(1, 1, 1, 0)
 position = Vector2(150, 600)
 texture = ExtResource("5_g0g67")
+
+[node name="Label" type="Label" parent="pictur_4"]
+offset_left = 56.0
+offset_top = 418.0
+offset_right = 260.0
+offset_bottom = 717.0
+text = "Most noble Caesar,
+Our ally in Bithynia has been struck by the forces of Pontus. Mithridates moves against us, and Rome's honor is at stake.
+Quickly help them        - Roman Senate"
+label_settings = SubResource("LabelSettings_nau5g")
+autowrap_mode = 3
 
 [node name="pictur_5" type="Node2D" parent="."]
 
