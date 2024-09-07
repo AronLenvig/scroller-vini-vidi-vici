@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c7kj225bsf85e"]
+[gd_scene load_steps=5 format=3 uid="uid://c7kj225bsf85e"]
 
 [ext_resource type="Script" path="res://add_point.gd" id="1_q38xb"]
 [ext_resource type="Script" path="res://area_2d.gd" id="1_vgiw3"]
@@ -10,37 +10,16 @@ radius = 199.161
 [node name="add_point" type="Node2D"]
 script = ExtResource("1_q38xb")
 
-[node name="add 100" type="Node2D" parent="."]
-script = ExtResource("2_jvsow")
-
-[node name="Area2D" type="Area2D" parent="add 100"]
-position = Vector2(-209, 0)
+[node name="Area2D" type="Area2D" parent="."]
 scale = Vector2(0.405258, 0.400002)
 script = ExtResource("1_vgiw3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="add 100/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(2.46756, -5.96043e-07)
 shape = SubResource("CircleShape2D_f2sxk")
 
-[node name="Sprite2D" type="Sprite2D" parent="add 100/Area2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 position = Vector2(0, 4.99997)
 texture = ExtResource("2_hhgfi")
 
-[node name="add 101" type="Node2D" parent="."]
-position = Vector2(181, 0)
-script = ExtResource("2_jvsow")
-
-[node name="Area2D" type="Area2D" parent="add 101"]
-scale = Vector2(0.405258, 0.400002)
-script = ExtResource("1_vgiw3")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="add 101/Area2D"]
-position = Vector2(2.46756, -5.96043e-07)
-shape = SubResource("CircleShape2D_f2sxk")
-
-[node name="Sprite2D" type="Sprite2D" parent="add 101/Area2D"]
-position = Vector2(0, 4.99997)
-texture = ExtResource("2_hhgfi")
-
-[connection signal="body_entered" from="add 100/Area2D" to="add 100" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="add 101/Area2D" to="add 101" method="_on_area_2d_body_entered2"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

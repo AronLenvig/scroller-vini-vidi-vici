@@ -13,4 +13,8 @@ func _process(delta: float) -> void:
 	if position.y > 2000:
 		queue_free()
 
- # Remove this node (the spawned object)
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		# Signal the player or global manager to increase points
+		Global.soldiers += 100
+		queue_free()  # Remove this node (the spawned object)
