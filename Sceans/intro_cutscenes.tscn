@@ -1,14 +1,14 @@
 [gd_scene load_steps=15 format=3 uid="uid://c8pivujqfxfma"]
 
 [ext_resource type="Script" path="res://scripts/intro_cutscene.gd" id="1_2g20n"]
-[ext_resource type="Texture2D" uid="uid://c5hxptce16fdy" path="res://picturs/picturs_for_cutsceness/purepng-business-man.png" id="2_dgmq4"]
 [ext_resource type="Texture2D" uid="uid://7kspsop4yaxa" path="res://picturs/Cesar_normal.png" id="2_ycc8w"]
+[ext_resource type="Texture2D" uid="uid://dle5yvj63u3j8" path="res://picturs/looka_out_window.PNG" id="3_7bohb"]
 [ext_resource type="Texture2D" uid="uid://b12ukdy4a2ttl" path="res://picturs/Untitled275.png" id="4_xaeya"]
 [ext_resource type="Texture2D" uid="uid://c2gny01jby14h" path="res://picturs/Untitled274.png" id="5_g0g67"]
 [ext_resource type="Texture2D" uid="uid://cmfm0ow7j508l" path="res://picturs/Untitled273.png" id="6_t6nkr"]
 
 [sub_resource type="Animation" id="Animation_2oc6t"]
-length = 0.001
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -241,7 +241,7 @@ color = Color(0, 0, 0, 1)
 modulate = Color(1, 1, 1, 0)
 position = Vector2(298, 1016)
 scale = Vector2(2.12857, 0.811659)
-texture = ExtResource("2_dgmq4")
+texture = ExtResource("3_7bohb")
 
 [node name="pictur_3" type="Node2D" parent="."]
 
