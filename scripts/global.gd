@@ -2,7 +2,7 @@ extends Node
 
 var soldiers = 100
 var cleopatras = 0
-var game_speed = 200
+var game_speed = 500
 
 var time_passed: float = 0.0
 var increment_interval: float = 1.0

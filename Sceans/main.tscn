@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://df7hr62kx7yog"]
+[gd_scene load_steps=10 format=3 uid="uid://df7hr62kx7yog"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_3ws5d"]
 [ext_resource type="PackedScene" uid="uid://dlbfj8pvfx6jv" path="res://Sceans/julius_ceaser.tscn" id="2_6ixn7"]
+[ext_resource type="Texture2D" uid="uid://bbq5xs2sg6dh3" path="res://picturs/wall.jpg" id="2_ms6xi"]
 [ext_resource type="Script" path="res://scripts/soilders_count.gd" id="3_7x8em"]
-[ext_resource type="Script" path="res://Sceans/cleopatra_count.gd" id="4_3s66u"]
+[ext_resource type="Script" path="res://scripts/cleopatra_count.gd" id="4_3s66u"]
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="4_qkqte"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blslf"]
@@ -25,12 +26,22 @@ position = Vector2(0, 1)
 position = Vector2(2.5, 600)
 shape = SubResource("RectangleShape2D_blslf")
 
+[node name="Sprite2D" type="Sprite2D" parent="left_wall"]
+position = Vector2(2, 588)
+scale = Vector2(0.431065, 24.32)
+texture = ExtResource("2_ms6xi")
+
 [node name="right_wall" type="StaticBody2D" parent="."]
 position = Vector2(594, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="right_wall"]
 position = Vector2(2.5, 600)
 shape = SubResource("RectangleShape2D_blslf")
+
+[node name="Sprite2D" type="Sprite2D" parent="right_wall"]
+position = Vector2(2, 588)
+scale = Vector2(0.431065, 24.32)
+texture = ExtResource("2_ms6xi")
 
 [node name="julius_ceasar" parent="." groups=["player"] instance=ExtResource("2_6ixn7")]
 position = Vector2(302, 1012)
