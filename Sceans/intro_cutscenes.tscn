@@ -176,7 +176,7 @@ tracks/3/path = NodePath("pictur_3/sprite_3:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(4.5, 5),
+"times": PackedFloat32Array(6.5, 7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -188,7 +188,7 @@ tracks/4/path = NodePath("pictur_2/sprite_2:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(6, 6.5),
+"times": PackedFloat32Array(8, 8.53333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -239,8 +239,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="sprite_2" type="Sprite2D" parent="pictur_2"]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(298, 1016)
-scale = Vector2(2.12857, 0.811659)
+position = Vector2(300, 1000)
 texture = ExtResource("3_7bohb")
 
 [node name="pictur_3" type="Node2D" parent="."]
@@ -260,11 +259,11 @@ texture = ExtResource("5_g0g67")
 [node name="Label" type="Label" parent="pictur_4"]
 offset_left = 56.0
 offset_top = 418.0
-offset_right = 260.0
+offset_right = 268.0
 offset_bottom = 717.0
 text = "Most noble Caesar,
 Our ally in Bithynia has been struck by the forces of Pontus. Mithridates moves against us, and Rome's honor is at stake.
-Quickly help them        - Roman Senate"
+Quickly help them!         - Roman Senate"
 label_settings = SubResource("LabelSettings_nau5g")
 autowrap_mode = 3
 

@@ -12,4 +12,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Global.soldiers < 0:
+		Transition.transition()
+		await Transition.on_tansition_finished
+		get_tree().change_scene_to_file("res://death_screen.tscn")
+	elif Global.timer < 0:
+		Transition.transition()
+		await Transition.on_tansition_finished
+		get_tree().change_scene_to_file("res://end_screen.tscn")

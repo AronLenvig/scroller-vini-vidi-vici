@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://df7hr62kx7yog"]
+[gd_scene load_steps=14 format=3 uid="uid://df7hr62kx7yog"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_3ws5d"]
 [ext_resource type="PackedScene" uid="uid://dlbfj8pvfx6jv" path="res://Sceans/julius_ceaser.tscn" id="2_6ixn7"]
@@ -42,7 +42,7 @@ position = Vector2(594, 3)
 position = Vector2(2.5, 600)
 shape = SubResource("RectangleShape2D_blslf")
 
-[node name="julius_ceasar" parent="." groups=["player"] instance=ExtResource("2_6ixn7")]
+[node name="julius_ceasar" parent="." instance=ExtResource("2_6ixn7")]
 position = Vector2(302, 1012)
 
 [node name="Control" type="Control" parent="."]
