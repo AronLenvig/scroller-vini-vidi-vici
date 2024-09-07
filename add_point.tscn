@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7kj225bsf85e"]
+
+[ext_resource type="Script" path="res://add_point.gd" id="1_q38xb"]
+[ext_resource type="Script" path="res://area_2d.gd" id="1_vgiw3"]
+[ext_resource type="Texture2D" uid="uid://bpy4mevtiki4m" path="res://Point gain.png" id="2_hhgfi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f2sxk"]
+radius = 199.161
+
+[node name="add_point" type="Node2D"]
+script = ExtResource("1_q38xb")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(0.405258, 0.400002)
+script = ExtResource("1_vgiw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2.46756, -5.96043e-07)
+shape = SubResource("CircleShape2D_f2sxk")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(0, 4.99997)
+texture = ExtResource("2_hhgfi")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
