@@ -2,7 +2,7 @@ extends Node
 
 var soldiers = 100
 var cleopatras = 0
-var game_speed = 500
+var game_speed = 250
 
 var time_passed: float = 0.0
 var increment_interval: float = 1.0
@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 		timer += delta
 	
 	if time_passed >= increment_interval:
-		game_speed += 10
+		game_speed += 20
 		time_passed = 0.0  # Reset the timer
 		
 		#print("Game speed increased: ", game_speed)

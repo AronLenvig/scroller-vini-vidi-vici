@@ -1,29 +1,37 @@
-[gd_scene load_steps=14 format=3 uid="uid://df7hr62kx7yog"]
+[gd_scene load_steps=18 format=3 uid="uid://df7hr62kx7yog"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_3ws5d"]
 [ext_resource type="PackedScene" uid="uid://dlbfj8pvfx6jv" path="res://Sceans/julius_ceaser.tscn" id="2_6ixn7"]
 [ext_resource type="Script" path="res://scripts/soilders_count.gd" id="3_7x8em"]
-[ext_resource type="Script" path="res://Sceans/cleopatra_count.gd" id="4_3s66u"]
+[ext_resource type="Script" path="res://scripts/cleopatra_count.gd" id="4_3s66u"]
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="4_qkqte"]
 [ext_resource type="Script" path="res://Sceans/timer.gd" id="6_iqk2k"]
 [ext_resource type="AudioStream" uid="uid://c7yk3bsftpw00" path="res://audio/Blonde.mp3" id="7_7nwj7"]
 [ext_resource type="Script" path="res://scripts/audio_stream_player.gd" id="8_tclwt"]
+[ext_resource type="Texture2D" uid="uid://cwe35tdhh3gty" path="res://picturs/floor.PNG" id="9_gvu7v"]
+[ext_resource type="Script" path="res://scripts/background.gd" id="10_2vlhp"]
+[ext_resource type="Script" path="res://Sceans/background_2.gd" id="11_15ilf"]
+[ext_resource type="Script" path="res://Sceans/background_3.gd" id="12_gmxuc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blslf"]
 size = Vector2(25, 1200)
 
 [sub_resource type="LabelSettings" id="LabelSettings_wv12q"]
 font_size = 32
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_hqfe7"]
 font_size = 24
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_n4ukq"]
 line_spacing = 0.0
 font_size = 54
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_yr01d"]
 font_size = 26
+font_color = Color(0, 0, 0, 1)
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_3ws5d")
@@ -58,10 +66,10 @@ anchor_left = 0.5
 anchor_top = 0.982
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -96.5
-offset_top = -157.238
-offset_right = 92.5
-offset_bottom = -101.0
+offset_left = -94.5
+offset_top = -86.238
+offset_right = 94.5
+offset_bottom = -30.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "asd"
@@ -77,10 +85,10 @@ anchor_left = 0.5
 anchor_top = 0.982
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -289.5
-offset_top = -126.238
-offset_right = -100.5
-offset_bottom = -70.0
+offset_left = -297.5
+offset_top = -36.238
+offset_right = -108.5
+offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "gay"
@@ -117,3 +125,21 @@ script = ExtResource("4_qkqte")
 stream = ExtResource("7_7nwj7")
 autoplay = true
 script = ExtResource("8_tclwt")
+
+[node name="background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(300, 600)
+texture = ExtResource("9_gvu7v")
+script = ExtResource("10_2vlhp")
+
+[node name="background2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(300, -550)
+texture = ExtResource("9_gvu7v")
+script = ExtResource("11_15ilf")
+
+[node name="background3" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(300, -1650)
+texture = ExtResource("9_gvu7v")
+script = ExtResource("12_gmxuc")

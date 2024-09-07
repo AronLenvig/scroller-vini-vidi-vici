@@ -69,6 +69,18 @@ tracks/4/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_o3hnm"]
 resource_name = "pic_2"
@@ -188,7 +200,19 @@ tracks/4/path = NodePath("pictur_2/sprite_2:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(8, 8.53333),
+"times": PackedFloat32Array(6, 6.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(6.56667, 7.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -204,10 +228,9 @@ _data = {
 "start_cutscean": SubResource("Animation_d8dm6")
 }
 
-[sub_resource type="LabelSettings" id="LabelSettings_nau5g"]
-line_spacing = 0.0
-font_size = 18
-font_color = Color(0, 0, 0, 1)
+[sub_resource type="LabelSettings" id="LabelSettings_7jqci"]
+font_size = 56
+font_color = Color(1, 1, 1, 0.690196)
 
 [node name="CanvasLayer2" type="CanvasLayer"]
 script = ExtResource("1_2g20n")
@@ -239,7 +262,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="sprite_2" type="Sprite2D" parent="pictur_2"]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(300, 1000)
+position = Vector2(302, 998)
 texture = ExtResource("3_7bohb")
 
 [node name="pictur_3" type="Node2D" parent="."]
@@ -256,20 +279,18 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(150, 600)
 texture = ExtResource("5_g0g67")
 
-[node name="Label" type="Label" parent="pictur_4"]
-offset_left = 56.0
-offset_top = 418.0
-offset_right = 268.0
-offset_bottom = 717.0
-text = "Most noble Caesar,
-Our ally in Bithynia has been struck by the forces of Pontus. Mithridates moves against us, and Rome's honor is at stake.
-Quickly help them!         - Roman Senate"
-label_settings = SubResource("LabelSettings_nau5g")
-autowrap_mode = 3
-
 [node name="pictur_5" type="Node2D" parent="."]
 
 [node name="sprite_5" type="Sprite2D" parent="pictur_5"]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(450, 200)
 texture = ExtResource("6_t6nkr")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 13.0
+offset_top = 1098.0
+offset_right = 571.0
+offset_bottom = 1209.0
+text = "\"Space\" to continue"
+label_settings = SubResource("LabelSettings_7jqci")
+horizontal_alignment = 1

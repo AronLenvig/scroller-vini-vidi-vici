@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var add_point_node = preload("res://soldier_bullet.tscn")
 
-@export var speed := 400
+@export var speed := int(Global.game_speed + 200)
 @export var jump_strength := -500
 @onready var animation_player = $AnimationPlayer
 var can_shoot = 0.0

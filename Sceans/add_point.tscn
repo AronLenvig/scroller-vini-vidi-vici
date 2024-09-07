@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c7kj225bsf85e"]
+[gd_scene load_steps=8 format=3 uid="uid://c7kj225bsf85e"]
 
 [ext_resource type="Script" path="res://scripts/add_point.gd" id="1_q38xb"]
 [ext_resource type="Script" path="res://scripts/area_2d.gd" id="1_vgiw3"]
-[ext_resource type="Texture2D" uid="uid://bpy4mevtiki4m" path="res://picturs/Point gain.png" id="2_hhgfi"]
+[ext_resource type="Texture2D" uid="uid://b4mgj5efvar1f" path="res://picturs/point.png" id="3_r12kp"]
+[ext_resource type="Texture2D" uid="uid://cxjawdair0m1l" path="res://picturs/negativ_point.png" id="4_o5fgl"]
+[ext_resource type="Texture2D" uid="uid://cml4gj1gmqtio" path="res://picturs/cleopatra.png" id="5_f6fpq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f2sxk"]
 radius = 199.161
@@ -24,7 +26,14 @@ shape = SubResource("CircleShape2D_f2sxk")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 position = Vector2(0, 4.99997)
-texture = ExtResource("2_hhgfi")
+scale = Vector2(1.59447, 1.59222)
+texture = ExtResource("3_r12kp")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Area2D"]
+visible = false
+position = Vector2(-2.46756, 4.99998)
+scale = Vector2(1.64136, 1.63672)
+texture = ExtResource("4_o5fgl")
 
 [node name="Label" type="Label" parent="Area2D"]
 offset_left = -202.0
@@ -35,5 +44,11 @@ label_settings = SubResource("LabelSettings_6arpb")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="cleopatra" type="Sprite2D" parent="Area2D"]
+visible = false
+position = Vector2(-2.46756, -17.4999)
+scale = Vector2(2.00316, 1.99184)
+texture = ExtResource("5_f6fpq")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
