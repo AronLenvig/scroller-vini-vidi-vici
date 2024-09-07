@@ -15,6 +15,7 @@ func _input(event: InputEvent) -> void:
 		
 func start_introcutscean():
 	animation_player.play("start_cutscean")
+	
 	#ToDO space to move between scenes
 	
 func _ready() -> void:
