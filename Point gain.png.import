@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5hxptce16fdy"
-path="res://.godot/imported/purepng-business-man.png-de27b30c4c31ce575e96cb9eb060d58e.ctex"
+uid="uid://bpy4mevtiki4m"
+path="res://.godot/imported/Point gain.png-0982b9d87ecd6441405108362263552c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://picturs/picturs_for_cutsceness/purepng-business-man.png"
-dest_files=["res://.godot/imported/purepng-business-man.png-de27b30c4c31ce575e96cb9eb060d58e.ctex"]
+source_file="res://Point gain.png"
+dest_files=["res://.godot/imported/Point gain.png-0982b9d87ecd6441405108362263552c.ctex"]
 
 [params]
 

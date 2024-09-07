@@ -1,6 +1,6 @@
 extends Node2D
 
-var add_point_node = preload("res://Sceans/add_point.tscn")
+var add_point_node = preload("res://add_point.tscn")
 
 var time_passed: float = 0.0
 var increment_interval: float = 1.0

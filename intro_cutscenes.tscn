@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://c8pivujqfxfma"]
 
-[ext_resource type="Script" path="res://scripts/intro_cutscene.gd" id="1_2g20n"]
-[ext_resource type="Texture2D" uid="uid://c5hxptce16fdy" path="res://picturs/picturs_for_cutsceness/purepng-business-man.png" id="2_dgmq4"]
+[ext_resource type="Script" path="res://intro_cutscene.gd" id="1_72kbv"]
+[ext_resource type="Texture2D" uid="uid://c5hxptce16fdy" path="res://picturs_for_intro/purepng-business-man.png" id="2_i2uno"]
 
 [sub_resource type="Animation" id="Animation_2oc6t"]
 length = 0.001
@@ -201,7 +201,7 @@ _data = {
 }
 
 [node name="CanvasLayer" type="CanvasLayer"]
-script = ExtResource("1_2g20n")
+script = ExtResource("1_72kbv")
 
 [node name="pictur_1" type="Node2D" parent="."]
 
@@ -209,7 +209,7 @@ script = ExtResource("1_2g20n")
 modulate = Color(1, 1, 1, 0)
 position = Vector2(148, 183)
 scale = Vector2(1.04286, 0.811659)
-texture = ExtResource("2_dgmq4")
+texture = ExtResource("2_i2uno")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -231,7 +231,7 @@ color = Color(0, 0, 0, 1)
 modulate = Color(1, 1, 1, 0)
 position = Vector2(311, 931)
 scale = Vector2(2.12857, 0.811659)
-texture = ExtResource("2_dgmq4")
+texture = ExtResource("2_i2uno")
 
 [node name="pictur_3" type="Node2D" parent="."]
 
@@ -239,7 +239,7 @@ texture = ExtResource("2_dgmq4")
 modulate = Color(1, 1, 1, 0)
 position = Vector2(449, 556)
 scale = Vector2(1.04286, 0.811659)
-texture = ExtResource("2_dgmq4")
+texture = ExtResource("2_i2uno")
 
 [node name="pictur_4" type="Node2D" parent="."]
 
@@ -247,7 +247,7 @@ texture = ExtResource("2_dgmq4")
 modulate = Color(1, 1, 1, 0)
 position = Vector2(149, 542)
 scale = Vector2(1.04286, 0.811659)
-texture = ExtResource("2_dgmq4")
+texture = ExtResource("2_i2uno")
 
 [node name="pictur_5" type="Node2D" parent="."]
 
@@ -255,4 +255,4 @@ texture = ExtResource("2_dgmq4")
 modulate = Color(1, 1, 1, 0)
 position = Vector2(448, 183)
 scale = Vector2(1.04286, 0.811659)
-texture = ExtResource("2_dgmq4")
+texture = ExtResource("2_i2uno")
