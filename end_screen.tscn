@@ -1,0 +1,109 @@
+[gd_scene load_steps=2 format=3 uid="uid://rq8dli30i16q"]
+
+[ext_resource type="Script" path="res://canvas_layer.gd" id="1_803u7"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_803u7")
+
+[node name="BackGround" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -1.0
+offset_right = -6.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="score_card" type="ColorRect" parent="."]
+z_index = 10
+offset_left = 287.0
+offset_top = 713.0
+offset_right = 567.0
+offset_bottom = 1012.0
+color = Color(0, 0, 0, 0.560784)
+
+[node name="Score" type="Label" parent="score_card"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.496
+anchor_top = 0.356
+anchor_right = 0.496
+anchor_bottom = 0.356
+offset_left = -39.88
+offset_top = -50.444
+offset_right = 40.12
+offset_bottom = -27.444
+grow_horizontal = 2
+grow_vertical = 2
+text = "0 Soldiers"
+
+[node name="Kleopatra" type="Label" parent="score_card"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.496
+anchor_top = 0.356
+anchor_right = 0.496
+anchor_bottom = 0.356
+offset_left = -39.88
+offset_top = -18.444
+offset_right = 40.12
+offset_bottom = 4.556
+grow_horizontal = 2
+grow_vertical = 2
+text = "0/5 Kleopatras"
+
+[node name="Label" type="Label" parent="score_card"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 8.0
+offset_right = 249.0
+offset_bottom = 57.0
+text = "You're Score was"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="you_need" type="Label" parent="score_card"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.037
+anchor_top = -0.038
+anchor_right = -0.037
+anchor_bottom = -0.038
+offset_left = 52.36
+offset_top = 163.362
+offset_right = 251.36
+offset_bottom = 198.362
+text = "You Need"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="amount_needed" type="Label" parent="score_card"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.037
+anchor_top = -0.038
+anchor_right = -0.037
+anchor_bottom = -0.038
+offset_left = 52.36
+offset_top = 212.362
+offset_right = 250.36
+offset_bottom = 243.362
+text = "3000 :Soldiers"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="victory_label" type="Label" parent="score_card"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.037
+anchor_top = -0.038
+anchor_right = -0.037
+anchor_bottom = -0.038
+offset_left = 51.36
+offset_top = 250.362
+offset_right = 249.36
+offset_bottom = 283.362
+horizontal_alignment = 1
+vertical_alignment = 1
