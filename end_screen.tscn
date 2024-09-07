@@ -1,9 +1,100 @@
-[gd_scene load_steps=2 format=3 uid="uid://rq8dli30i16q"]
+[gd_scene load_steps=5 format=3 uid="uid://rq8dli30i16q"]
 
 [ext_resource type="Script" path="res://canvas_layer.gd" id="1_803u7"]
 
+[sub_resource type="Animation" id="Animation_o5khw"]
+resource_name = "Points_tally"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("you_need:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("amount_needed:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("victory_label:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_0icrv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("you_need:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("amount_needed:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("victory_label:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qsvy4"]
+_data = {
+"Points_tally": SubResource("Animation_o5khw"),
+"RESET": SubResource("Animation_0icrv")
+}
+
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_803u7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../score_card")
+libraries = {
+"": SubResource("AnimationLibrary_qsvy4")
+}
 
 [node name="BackGround" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -65,6 +156,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="you_need" type="Label" parent="score_card"]
+visible = false
+z_index = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.037
@@ -80,6 +173,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="amount_needed" type="Label" parent="score_card"]
+z_index = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.037
@@ -90,11 +184,13 @@ offset_left = 52.36
 offset_top = 212.362
 offset_right = 250.36
 offset_bottom = 243.362
-text = "3000 :Soldiers"
+text = "4000 Soldiers"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="victory_label" type="Label" parent="score_card"]
+visible = false
+z_index = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.037
