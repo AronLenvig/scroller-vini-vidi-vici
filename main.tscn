@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://df7hr62kx7yog"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_a6ui1"]
+[ext_resource type="PackedScene" uid="uid://dlbfj8pvfx6jv" path="res://julius_ceaser.tscn" id="1_hjvfl"]
+[ext_resource type="Texture2D" uid="uid://bpy4mevtiki4m" path="res://Point gain.png" id="2_dipmh"]
+[ext_resource type="Script" path="res://area_2d.gd" id="2_k3x5w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_blslf"]
+size = Vector2(25, 1200)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f2sxk"]
+radius = 199.161
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_a6ui1")
+
+[node name="left_wall" type="StaticBody2D" parent="."]
+position = Vector2(0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left_wall"]
+position = Vector2(2.5, 600)
+shape = SubResource("RectangleShape2D_blslf")
+
+[node name="right_wall" type="StaticBody2D" parent="."]
+position = Vector2(594, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right_wall"]
+position = Vector2(2.5, 600)
+shape = SubResource("RectangleShape2D_blslf")
+
+[node name="julius_ceasar" parent="." instance=ExtResource("1_hjvfl")]
+position = Vector2(302, 1012)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(159, 0)
+scale = Vector2(0.405258, 0.400002)
+script = ExtResource("2_k3x5w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_f2sxk")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("2_dipmh")
+
+[connection signal="body_entered" from="Area2D" to="julius_ceasar" method="_on_area_2d_body_entered"]
