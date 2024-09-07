@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c7kj225bsf85e"]
+[gd_scene load_steps=6 format=3 uid="uid://c7kj225bsf85e"]
 
 [ext_resource type="Script" path="res://scripts/add_point.gd" id="1_q38xb"]
 [ext_resource type="Script" path="res://scripts/area_2d.gd" id="1_vgiw3"]
@@ -6,6 +6,10 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f2sxk"]
 radius = 199.161
+
+[sub_resource type="LabelSettings" id="LabelSettings_6arpb"]
+font_size = 100
+outline_size = 2
 
 [node name="add_point" type="Node2D"]
 script = ExtResource("1_q38xb")
@@ -21,5 +25,15 @@ shape = SubResource("CircleShape2D_f2sxk")
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 position = Vector2(0, 4.99997)
 texture = ExtResource("2_hhgfi")
+
+[node name="Label" type="Label" parent="Area2D"]
+offset_left = -153.0
+offset_top = -110.0
+offset_right = 158.0
+offset_bottom = 112.0
+text = "++100"
+label_settings = SubResource("LabelSettings_6arpb")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

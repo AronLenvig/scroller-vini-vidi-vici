@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2gny01jby14h"
-path="res://.godot/imported/Untitled274.png-d0d9a76ebd7980844401d5500445839f.ctex"
+uid="uid://ce1uicaxtfe6b"
+path="res://.godot/imported/ceaser1.png-fd2d3704eaac6f1545bb68c7936f4172.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://picturs/Untitled274.png"
-dest_files=["res://.godot/imported/Untitled274.png-d0d9a76ebd7980844401d5500445839f.ctex"]
+source_file="res://picturs/ceaser1.png"
+dest_files=["res://.godot/imported/ceaser1.png-fd2d3704eaac6f1545bb68c7936f4172.ctex"]
 
 [params]
 

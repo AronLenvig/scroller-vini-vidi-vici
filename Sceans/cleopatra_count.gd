@@ -7,5 +7,6 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	text = "Cleopatra: " + str(Global.soldiers)
+	text = "Cleopatra: " + str(Global.cleopatras)
