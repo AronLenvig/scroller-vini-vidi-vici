@@ -24,6 +24,10 @@ Transition="*res://Sceans/transition.tscn"
 
 window/size/viewport_width=600
 window/size/viewport_height=1200
+window/size/initial_position=Vector2i(200, 0)
+window/size/resizable=false
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_height"
 
 [global_group]
 

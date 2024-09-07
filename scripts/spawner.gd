@@ -7,11 +7,12 @@ var time_passed: float = 0.0
 var increment_interval: float = 3.0
 
 var lable_funct = [
-	["+100", "add100"],
-	["-100", "sub100"],
-	["x 2", "ganga2"],
-	["÷ 2", "div2"],
-	["-69", "sub69"],
+	["+100", "add100", false],
+	["-100", "sub100", true],
+	["x 2", "ganga2", false],
+	["÷ 2", "div2", true],
+	["-69", "sub69", true],
+	["cleo", "cleo", false]
 ]
 
 var buble_list = [
@@ -47,16 +48,16 @@ func bubble_wave():
 	spawn_point_gain(Vector2(0, 0), 0.7)
 	spawn_point_gain(Vector2(-100, 100), 0.7)
 	spawn_point_gain(Vector2(-200, 200), 0.7)
-	
-	
 
-		
 func spawn_point_gain(pos: Vector2, scale: float = 1.0):
 	var point_instance = add_point_node.instantiate()
 	#add_point_node.positions = pos
 	var _item = lable_funct.pick_random()
 	point_instance.position = pos
 	point_instance.scale = Vector2(scale, scale)
+	if _item[0] == "cleo":
+		point_instance._is_cleopatra = true
+	point_instance._is_negativ = _item[2]
 	point_instance.label_text = _item[0]
 	var callable = Callable(self, _item[1])
 	point_instance._action = callable
@@ -82,4 +83,7 @@ func div2():
 	
 func sub69():
 	Global.soldiers -= 69
+	
+func cleo():
+	Global.cleopatras += 1
 	
