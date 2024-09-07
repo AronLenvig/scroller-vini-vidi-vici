@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://df7hr62kx7yog"]
+[gd_scene load_steps=18 format=3 uid="uid://df7hr62kx7yog"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_3ws5d"]
 [ext_resource type="PackedScene" uid="uid://dlbfj8pvfx6jv" path="res://Sceans/julius_ceaser.tscn" id="2_6ixn7"]
@@ -8,6 +8,10 @@
 [ext_resource type="Script" path="res://Sceans/timer.gd" id="6_iqk2k"]
 [ext_resource type="AudioStream" uid="uid://c7yk3bsftpw00" path="res://audio/Blonde.mp3" id="7_7nwj7"]
 [ext_resource type="Script" path="res://scripts/audio_stream_player.gd" id="8_tclwt"]
+[ext_resource type="Texture2D" uid="uid://cwe35tdhh3gty" path="res://picturs/floor.PNG" id="9_gvu7v"]
+[ext_resource type="Script" path="res://scripts/background.gd" id="10_2vlhp"]
+[ext_resource type="Script" path="res://Sceans/background_2.gd" id="11_15ilf"]
+[ext_resource type="Script" path="res://Sceans/background_3.gd" id="12_gmxuc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blslf"]
 size = Vector2(25, 1200)
@@ -117,3 +121,21 @@ script = ExtResource("4_qkqte")
 stream = ExtResource("7_7nwj7")
 autoplay = true
 script = ExtResource("8_tclwt")
+
+[node name="background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(300, 600)
+texture = ExtResource("9_gvu7v")
+script = ExtResource("10_2vlhp")
+
+[node name="background2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(300, -550)
+texture = ExtResource("9_gvu7v")
+script = ExtResource("11_15ilf")
+
+[node name="background3" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(300, -1650)
+texture = ExtResource("9_gvu7v")
+script = ExtResource("12_gmxuc")
