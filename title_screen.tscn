@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://bekbmn5cbsx1e"]
+
+[ext_resource type="Script" path="res://title_screen.gd" id="1_n1pgm"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n1pgm")
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 695.0
+offset_right = 390.0
+offset_bottom = 745.0
+text = "Start Game"
+
+[node name="QuitButton" type="Button" parent="."]
+offset_left = 230.0
+offset_top = 768.0
+offset_right = 390.0
+offset_bottom = 818.0
+text = "Quit
+"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_button_pressed"]
