@@ -14,12 +14,15 @@ var lable_funct = [
 	["-1000", "sub1000", true],
 	["÷ 10", "div10", true],
 	["+100", "add100", false],
+	["+100", "add100", false],
+	["-100", "sub100", true],
 	["-100", "sub100", true],
 	["x 2", "ganga2", false],
 	["x 1.5", "ganga1_5", false],
 	["÷ 2", "div2", true],
 	["÷ 4", "div4", true],
 	["-69", "sub69", true],
+	["cleo", "cleo", false],
 	["cleo", "cleo", false],
 ]
 
@@ -31,6 +34,7 @@ var buble_list = [
 	"douple_buble_front_walls",
 	"douple_buble_back_walls",
 	"wall_obstical",
+	"wall_obstical_reverse",
 ]
 
 # Called when the node enters the scene tree for the first time.
@@ -61,6 +65,13 @@ func wall_obstical():
 	
 	spawn_wall_h(Vector2(-115, 150))
 	spawn_wall_h(Vector2(0, 150))
+	
+func wall_obstical_reverse():
+	spawn_wall_h(Vector2(280, 150))
+	spawn_wall_h(Vector2(120, 150))
+	
+	spawn_wall_h(Vector2(-115, -150))
+	spawn_wall_h(Vector2(0, -150))
 	
 	
 func douple_buble_front_walls():
@@ -114,13 +125,10 @@ func spawn_enemy(pos: Vector2):
 	enemy_instance.position = pos
 	add_child(enemy_instance)
 	
-	
 func spawn_enemy_w(pos: Vector2):
 	var enemy_instance = enemy_node_w.instantiate()
 	enemy_instance.position = pos
 	add_child(enemy_instance)
-	
-func add100():
 	Global.soldiers += 100
 	
 func sub100():
@@ -142,19 +150,19 @@ func div2():
 	if Global.soldiers == 0:
 		Global.soldiers = 0
 	else:
-		Global.soldiers = Global.soldiers / 2
+		Global.soldiers = int(Global.soldiers / 2)
 		
 func div4():
 	if Global.soldiers == 0:
 		Global.soldiers = 0
 	else:
-		Global.soldiers = Global.soldiers / 4
+		Global.soldiers = int(Global.soldiers / 4)
 
 func div10():
 	if Global.soldiers == 0:
 		Global.soldiers = 0
 	else:
-		Global.soldiers = Global.soldiers / 10
+		Global.soldiers = int(Global.soldiers / 10)
 	
 func sub69():
 	Global.soldiers -= 69

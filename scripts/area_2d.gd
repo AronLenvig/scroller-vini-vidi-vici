@@ -8,11 +8,9 @@ func _ready() -> void:
 	pass
 	
 func _on_Area2D_body_entered(body):
-	print("entered")
 	# Check if the body is in the "Player" group
 	if body.is_in_group("Player"):
 		Global.soldiers += 100
-		print("hallo")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

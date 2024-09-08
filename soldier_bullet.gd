@@ -8,7 +8,6 @@ func _ready() -> void:
 	add_to_group("bullet")
 	Global.soldiers -= 100
 	curent_x_pos = position.x
-	print(is_in_group("bullet"))
 
 func _process(delta: float) -> void:
 	velocity.y = 500  # Change the speed of the movement here

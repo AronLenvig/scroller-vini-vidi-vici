@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://scripts/background.gd" id="10_2vlhp"]
 [ext_resource type="Script" path="res://Sceans/background_2.gd" id="11_15ilf"]
 [ext_resource type="Script" path="res://Sceans/background_3.gd" id="12_gmxuc"]
-[ext_resource type="PackedScene" path="res://Sceans/mobile_canvas.tscn" id="13_wipwv"]
+[ext_resource type="PackedScene" uid="uid://bwuv0fesiv5dl" path="res://Sceans/mobile_canvas.tscn" id="13_wipwv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wv12q"]
 font_size = 32
