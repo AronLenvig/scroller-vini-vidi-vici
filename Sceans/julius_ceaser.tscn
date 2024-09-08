@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://dlbfj8pvfx6jv"]
+[gd_scene load_steps=12 format=3 uid="uid://dlbfj8pvfx6jv"]
 
 [ext_resource type="Script" path="res://scripts/julius_ceaser.gd" id="1_033tt"]
 [ext_resource type="Texture2D" uid="uid://ce1uicaxtfe6b" path="res://picturs/ceaser1.png" id="2_1cdn8"]
 [ext_resource type="Script" path="res://scripts/collision_shape_2d.gd" id="3_vgdhw"]
 [ext_resource type="Texture2D" uid="uid://cba6ogxcwn1rl" path="res://picturs/ceaser0.png" id="4_3dw2x"]
 [ext_resource type="Texture2D" uid="uid://dfj5u8qewadhd" path="res://picturs/ceaser2.png" id="5_pcc8v"]
+[ext_resource type="Texture2D" uid="uid://blmyh68k7pm7t" path="res://picturs/soilder_logo.png" id="6_l5dpv"]
+[ext_resource type="PackedScene" uid="uid://ts5yyuv8mtvb" path="res://back_soilder.tscn" id="7_om8l6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_etkox"]
 radius = 26.0192
@@ -62,3 +64,12 @@ script = ExtResource("3_vgdhw")
 libraries = {
 "": SubResource("AnimationLibrary_i61ft")
 }
+
+[node name="SoilderLogo2" type="Sprite2D" parent="."]
+position = Vector2(-32, 63)
+scale = Vector2(0.14125, 0.14125)
+texture = ExtResource("6_l5dpv")
+flip_h = true
+
+[node name="soldier_bulet" parent="." instance=ExtResource("7_om8l6")]
+position = Vector2(26, 58)

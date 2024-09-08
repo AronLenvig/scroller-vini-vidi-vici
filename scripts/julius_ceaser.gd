@@ -34,10 +34,7 @@ func _physics_process(delta: float) -> void:
 		direction.x -= 1
 	elif Input.is_action_pressed("right"):
 		direction.x += 1
-	
-
 		
-	
 	velocity.x = direction.x * speed
 	#velocity.y = direction.y * speed
 	
@@ -46,6 +43,5 @@ func _physics_process(delta: float) -> void:
 	if new_y != starting_y:
 		get_tree().change_scene_to_file("res://death_screen.tscn")
 		
-	
 	# when hitting the wall ignore
 	move_and_slide()

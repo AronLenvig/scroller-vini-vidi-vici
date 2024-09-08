@@ -27,5 +27,6 @@ func reset_values():
 	Global.timer = 0.0
 	Global.soldiers = 100
 	Global.game_speed = 200
+	Global.cleopatras = 0
 	pass
 	

@@ -5,10 +5,11 @@ var curent_x_pos
 var direction = Vector2()
 
 func _ready() -> void:
+	Global.soldiers -= 100
 	curent_x_pos = position.x
 
 func _process(delta: float) -> void:
-	velocity.y = 2500  # Change the speed of the movement here
+	velocity.y = 500  # Change the speed of the movement here
 	position.y -= velocity.y * delta
 	
 	if position.y < -2000:
