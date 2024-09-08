@@ -16,7 +16,8 @@ func _input(event: InputEvent) -> void:
 func start_introcutscean():
 	animation_player.play("start_cutscean")
 	$Label.visible = true
-	$Button.visible = true
+	if Global.is_mobile:
+		$Button.visible = true
 	
 	#ToDO space to move between scenes
 	
