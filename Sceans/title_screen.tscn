@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bekbmn5cbsx1e"]
+[gd_scene load_steps=5 format=3 uid="uid://bekbmn5cbsx1e"]
 
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_0i0xw"]
 [ext_resource type="Texture2D" uid="uid://w8ncd4kpkl4u" path="res://picturs/start_julius.png" id="2_akhqp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wsxt3"]
+font_size = 70
+
+[sub_resource type="LabelSettings" id="LabelSettings_nj1yl"]
+font_size = 34
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -34,6 +40,60 @@ position = Vector2(303, 587)
 scale = Vector2(0.588379, 0.588379)
 texture = ExtResource("2_akhqp")
 
+[node name="QuitButton2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 1096.0
+offset_right = 386.0
+offset_bottom = 1146.0
+text = "Instruction"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 120
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.815686)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 93.0
+offset_right = 540.0
+offset_bottom = 1110.0
+text = "W | Shoot 
+A  | Move Left
+D  | Move Right 
+
+"
+label_settings = SubResource("LabelSettings_wsxt3")
+
+[node name="Label2" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 457.0
+offset_right = 571.0
+offset_bottom = 849.0
+text = "Get as many soldiers as You can
+
+Shooting cost's 100 soldiers
+
+Don't hit the walls!!"
+label_settings = SubResource("LabelSettings_nj1yl")
+
+[node name="Button" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 1054.0
+offset_right = 385.0
+offset_bottom = 1102.0
+text = "Leave Tuturial"
+
 [connection signal="pressed" from="StartButton" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="QuitButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="QuitButton2" to="." method="_on_to_tut_pressed"]
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_Leave_tut_pressed"]

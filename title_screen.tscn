@@ -1,20 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://csaxaslxqloh1"]
+[gd_scene load_steps=5 format=3 uid="uid://csaxaslxqloh1"]
 
 [ext_resource type="Texture2D" uid="uid://w8ncd4kpkl4u" path="res://picturs/start_julius.png" id="1_ju54j"]
+[ext_resource type="Script" path="res://title_screen.gd" id="1_o8dcm"]
 
-[node name="TitleScreen" type="Control"]
+[sub_resource type="LabelSettings" id="LabelSettings_ub62k"]
+font_size = 70
+
+[sub_resource type="LabelSettings" id="LabelSettings_bhsxt"]
+font_size = 34
+
+[node name="TitleScreen2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_o8dcm")
 
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 217.0
+offset_left = 219.0
 offset_top = 710.0
-offset_right = 377.0
+offset_right = 379.0
 offset_bottom = 760.0
 text = "Start Game"
 
@@ -27,12 +35,64 @@ offset_bottom = 830.0
 text = "Quit
 "
 
+[node name="QuitButton2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 850.0
+offset_right = 377.0
+offset_bottom = 900.0
+text = "Instruction"
+
 [node name="StartJulius" type="Sprite2D" parent="."]
 z_index = 100
 position = Vector2(312, 322)
 scale = Vector2(0.588379, 0.588379)
 texture = ExtResource("1_ju54j")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 120
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.815686)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 93.0
+offset_right = 540.0
+offset_bottom = 1110.0
+text = "W | Shoot
+A  | Move Left
+D  | Move Right 
+
+"
+label_settings = SubResource("LabelSettings_ub62k")
+
+[node name="Label2" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 457.0
+offset_right = 571.0
+offset_bottom = 849.0
+text = "Get as many soldiers as You can
+
+Don't hit the walls!!"
+label_settings = SubResource("LabelSettings_bhsxt")
+
+[node name="Button" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 1054.0
+offset_right = 383.0
+offset_bottom = 1102.0
+text = "Leave Tuturial"
+
 [connection signal="pressed" from="StartButton" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="QuitButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="QuitButton2" to="." method="_on_introduction_2_pressed"]
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_Leave_tut_pressed"]

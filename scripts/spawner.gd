@@ -11,7 +11,7 @@ var increment_interval: float = 2.5
 
 var lable_funct = [
 	["+1000", "add1000", false],
-	["-1000", "add1000", true],
+	["-1000", "sub1000", true],
 	["÷ 10", "div10", true],
 	["+100", "add100", false],
 	["-100", "sub100", true],

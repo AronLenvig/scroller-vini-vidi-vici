@@ -1,5 +1,6 @@
 extends Control
 
+@onready var tut = $ColorRect
 
 func _on_button_pressed() -> void:
 	Transition.transition()
@@ -9,3 +10,11 @@ func _on_button_pressed() -> void:
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_Leave_tut_pressed() -> void:
+	tut.visible = false
+
+
+func _on_to_tut_pressed() -> void:
+	tut.visible = true
