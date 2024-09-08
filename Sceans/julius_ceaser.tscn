@@ -56,7 +56,7 @@ script = ExtResource("1_033tt")
 scale = Vector2(0.347656, 0.347656)
 texture = ExtResource("2_1cdn8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["player"]]
 shape = SubResource("CircleShape2D_etkox")
 script = ExtResource("3_vgdhw")
 
