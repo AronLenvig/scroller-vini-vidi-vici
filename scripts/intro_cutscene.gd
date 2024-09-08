@@ -15,6 +15,8 @@ func _input(event: InputEvent) -> void:
 		
 func start_introcutscean():
 	animation_player.play("start_cutscean")
+	$Label.visible = true
+	$Button.visible = true
 	
 	#ToDO space to move between scenes
 	
@@ -30,3 +32,7 @@ func reset_values():
 	Global.cleopatras = 0
 	pass
 	
+func _on_button_pressed() -> void:
+	animation_player.stop()
+	get_tree().change_scene_to_file("res://Sceans/main.tscn")
+	Global.game_start = true

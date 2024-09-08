@@ -4,6 +4,11 @@ extends Node2D
 var ceaser_soldiers: int = 100
 var player_score: int = 0
 
+func _ready() -> void:
+	var m_type = OS.get_name()
+	if m_type != "macOS" or m_type != "windows":
+		$MobileCanvas.visible = true
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Global.soldiers < 0:

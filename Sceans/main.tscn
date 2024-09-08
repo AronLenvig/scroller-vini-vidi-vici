@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://df7hr62kx7yog"]
+[gd_scene load_steps=19 format=3 uid="uid://df7hr62kx7yog"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_3ws5d"]
 [ext_resource type="PackedScene" uid="uid://dlbfj8pvfx6jv" path="res://Sceans/julius_ceaser.tscn" id="2_6ixn7"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://scripts/background.gd" id="10_2vlhp"]
 [ext_resource type="Script" path="res://Sceans/background_2.gd" id="11_15ilf"]
 [ext_resource type="Script" path="res://Sceans/background_3.gd" id="12_gmxuc"]
+[ext_resource type="PackedScene" uid="uid://bwuv0fesiv5dl" path="res://Sceans/mobile_canvas.tscn" id="13_wipwv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wv12q"]
 font_size = 32
@@ -148,3 +149,6 @@ z_index = -1
 position = Vector2(300, -1650)
 texture = ExtResource("9_gvu7v")
 script = ExtResource("12_gmxuc")
+
+[node name="MobileCanvas" parent="." instance=ExtResource("13_wipwv")]
+visible = false
