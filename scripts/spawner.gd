@@ -64,14 +64,14 @@ func wall_obstical():
 	spawn_wall_h(Vector2(120, -150))
 	
 	spawn_wall_h(Vector2(-115, 150))
-	spawn_wall_h(Vector2(0, 150))
+
 	
 func wall_obstical_reverse():
 	spawn_wall_h(Vector2(280, 150))
-	spawn_wall_h(Vector2(120, 150))
+	spawn_wall_h(Vector2(120, -150))
 	
 	spawn_wall_h(Vector2(-115, -150))
-	spawn_wall_h(Vector2(0, -150))
+
 	
 	
 func douple_buble_front_walls():
@@ -129,6 +129,9 @@ func spawn_enemy_w(pos: Vector2):
 	var enemy_instance = enemy_node_w.instantiate()
 	enemy_instance.position = pos
 	add_child(enemy_instance)
+	Global.soldiers += 100
+	
+func add100():
 	Global.soldiers += 100
 	
 func sub100():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bthkwu0jctb5i"]
+[gd_scene load_steps=5 format=3 uid="uid://itcah5h4bypw"]
 
 [ext_resource type="Script" path="res://cleopatra_scene.gd" id="1_pvcf2"]
 [ext_resource type="Texture2D" uid="uid://bxwmmhkk2fh04" path="res://picturs/julius_cleopatra.png" id="2_gs0j2"]
@@ -64,5 +64,5 @@ label_settings = SubResource("LabelSettings_jm1aa")
 autowrap_mode = 1
 
 [connection signal="pressed" from="Reset" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
