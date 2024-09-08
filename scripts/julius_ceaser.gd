@@ -20,7 +20,7 @@ func spawn_point_gain(pos: Vector2):
 	var point_instance = add_point_node.instantiate()
 	#add_point_node.positions = pos
 	point_instance.position = pos
-	add_child(point_instance)
+	add_sibling(point_instance)
 	print("spawn_point_gain")
 	
 func add_follower(pos: Vector2, flip_h: bool = false):
