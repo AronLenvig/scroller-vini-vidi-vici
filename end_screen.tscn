@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://rq8dli30i16q"]
+[gd_scene load_steps=8 format=3 uid="uid://rq8dli30i16q"]
 
 [ext_resource type="Script" path="res://canvas_layer.gd" id="1_803u7"]
+[ext_resource type="Texture2D" uid="uid://snh2vjaelw6c" path="res://picturs/julius_victory.webp" id="2_d7u14"]
+[ext_resource type="Texture2D" uid="uid://baof48k1b0sm3" path="res://picturs/julius_defeat.webp" id="3_bjfew"]
 
 [sub_resource type="Animation" id="Animation_o5khw"]
 resource_name = "Points_tally"
@@ -87,6 +89,10 @@ _data = {
 "RESET": SubResource("Animation_0icrv")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_spy37"]
+font_size = 35
+outline_size = 1
+
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_803u7")
 
@@ -106,6 +112,7 @@ offset_right = -6.0
 offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="score_card" type="ColorRect" parent="."]
 z_index = 10
@@ -217,6 +224,26 @@ offset_top = 716.0
 offset_right = 212.0
 offset_bottom = 773.0
 text = "Quit"
+
+[node name="JuliusVictory" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(300, 390)
+scale = Vector2(0.583984, 0.583984)
+texture = ExtResource("2_d7u14")
+
+[node name="JuliusDefeat" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(297.5, 393.5)
+scale = Vector2(0.588867, 0.588867)
+texture = ExtResource("3_bjfew")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 62.0
+offset_top = 38.0
+offset_right = 514.0
+offset_bottom = 126.0
+label_settings = SubResource("LabelSettings_spy37")
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

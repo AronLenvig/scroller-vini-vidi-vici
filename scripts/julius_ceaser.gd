@@ -15,6 +15,8 @@ var followeres = 2
 func _ready() -> void:
 	animation_player.play("walk")
 	starting_y = position.y
+	add_follower(Vector2(25, 50), false )
+	add_follower(Vector2(-25, 50), true )
 
 func spawn_point_gain(pos: Vector2):
 	var point_instance = add_point_node.instantiate()
@@ -34,7 +36,11 @@ func add_follower(pos: Vector2, flip_h: bool = false):
 func _physics_process(delta: float) -> void:
 	if last_soilder != Global.soldiers:
 		print("update")
-		followeres = int(Global.soldiers / 100)
+		var new_followeres = int(Global.soldiers / 100)
+		if new_followeres > followeres:
+			for i in range(new_followeres-followeres):
+				pass
+		
 			#for i in range(followeres):
 				#add_follower(Vector2(25, 50), false )
 				#add_follower(Vector2(-25, 50), true )

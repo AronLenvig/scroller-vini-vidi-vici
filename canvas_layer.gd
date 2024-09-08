@@ -35,10 +35,17 @@ func update_score() -> void:
 	animation_player.play("Points_tally")
 	
 	if victory_reweld:
-		pass
+		$JuliusVictory.visible = true
+		$Label.text = "veni, vidi, vici"
+		if Global.cleopatras >= 5:
+			await get_tree().create_timer(2).timeout
+			Transition.transition()
+			await Transition.on_tansition_finished
+			get_tree().change_scene_to_file("res://cleopatra_scene.tscn")
 	else:
+		$Label.text = "Defeat! too few men"
+		$JuliusDefeat.visible = true
 		pass
-
 
 func _on_reset_pressed() -> void:
 	Transition.transition()

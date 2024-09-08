@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://bthkwu0jctb5i"]
+
+[ext_resource type="Script" path="res://death_screen.gd" id="1_aqe26"]
+[ext_resource type="Texture2D" uid="uid://bxwmmhkk2fh04" path="res://picturs/julius_cleopatra.png" id="2_gs0j2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mlsqc"]
+font_size = 79
+
+[sub_resource type="LabelSettings" id="LabelSettings_jm1aa"]
+line_spacing = 6.0
+font_size = 23
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aqe26")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(305, 603)
+scale = Vector2(0.594727, 0.5625)
+texture = ExtResource("2_gs0j2")
+
+[node name="Reset" type="Button" parent="."]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 1038.0
+offset_right = 373.0
+offset_bottom = 1096.0
+text = "Reset"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 954.0
+offset_right = 373.0
+offset_bottom = 1011.0
+text = "Quit"
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0.593849, 0.311664, 1)
+layout_mode = 0
+offset_left = -7.0
+offset_top = 187.0
+offset_right = 606.0
+offset_bottom = 319.0
+text = "veni, vici, vidi"
+label_settings = SubResource("LabelSettings_mlsqc")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 55.0
+offset_right = 570.0
+offset_bottom = 196.0
+text = "Caesar's triumph in Asia Minor was so decisive that he swiftly sailed to Egypt, where victory  gave way to cruising the Nile with Cleopatra."
+label_settings = SubResource("LabelSettings_jm1aa")
+autowrap_mode = 1
+
+[connection signal="pressed" from="Reset" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_button_pressed"]

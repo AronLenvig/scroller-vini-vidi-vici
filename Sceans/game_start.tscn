@@ -1,9 +1,16 @@
-[gd_scene format=3 uid="uid://brjllehd1yp5g"]
+[gd_scene load_steps=2 format=3 uid="uid://brjllehd1yp5g"]
 
-[node name="Control" type="Control"]
+[ext_resource type="Texture2D" uid="uid://w8ncd4kpkl4u" path="res://picturs/start_julius.png" id="1_lsi3n"]
+
+[node name="Control2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="StartJulius" type="Sprite2D" parent="."]
+position = Vector2(302, 599)
+scale = Vector2(0.582031, 0.582031)
+texture = ExtResource("1_lsi3n")

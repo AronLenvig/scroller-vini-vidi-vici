@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://wkr0yun58dxj"]
+[gd_scene load_steps=2 format=3 uid="uid://csaxaslxqloh1"]
+
+[ext_resource type="Texture2D" uid="uid://w8ncd4kpkl4u" path="res://picturs/start_julius.png" id="1_ju54j"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -10,20 +12,26 @@ grow_vertical = 2
 
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 230.0
-offset_top = 695.0
-offset_right = 390.0
-offset_bottom = 745.0
+offset_left = 217.0
+offset_top = 710.0
+offset_right = 377.0
+offset_bottom = 760.0
 text = "Start Game"
 
 [node name="QuitButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 230.0
-offset_top = 768.0
-offset_right = 390.0
-offset_bottom = 818.0
+offset_left = 218.0
+offset_top = 780.0
+offset_right = 378.0
+offset_bottom = 830.0
 text = "Quit
 "
+
+[node name="StartJulius" type="Sprite2D" parent="."]
+z_index = 100
+position = Vector2(312, 322)
+scale = Vector2(0.588379, 0.588379)
+texture = ExtResource("1_ju54j")
 
 [connection signal="pressed" from="StartButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_button_pressed"]
