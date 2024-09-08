@@ -18,12 +18,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_o8dcm")
 
+[node name="start_mobile" type="Button" parent="."]
+offset_left = 215.0
+offset_top = 718.0
+offset_right = 375.0
+offset_bottom = 768.0
+text = "Start Game"
+
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 219.0
-offset_top = 710.0
-offset_right = 379.0
-offset_bottom = 760.0
+offset_left = 217.0
+offset_top = 656.0
+offset_right = 377.0
+offset_bottom = 706.0
 text = "Start Game"
 
 [node name="QuitButton" type="Button" parent="."]
@@ -50,6 +57,7 @@ scale = Vector2(0.588379, 0.588379)
 texture = ExtResource("1_ju54j")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 z_index = 120
 layout_mode = 1
 anchors_preset = 15
@@ -91,6 +99,7 @@ offset_right = 383.0
 offset_bottom = 1102.0
 text = "Leave Tuturial"
 
+[connection signal="pressed" from="start_mobile" to="." method="_on_start_mobile_pressed"]
 [connection signal="pressed" from="StartButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_button_pressed"]

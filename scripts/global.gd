@@ -8,6 +8,7 @@ var time_passed: float = 0.0
 var increment_interval: float = 1.0
 var timer: float = 0.0
 var game_start = false
+var is_mobile = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

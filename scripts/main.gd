@@ -7,12 +7,13 @@ var player_score: int = 0
 func _ready() -> void:
 	var diskArr = ["macos", "windows", "linux", "web"]
 	
-	print(OS.get_name())
-	print(OS.get_processor_name())
-	print(OS.get_process_id())
-	
-	if !diskArr.has(OS.get_name().to_lower()):
+	if Global.is_mobile:
 		$MobileCanvas.visible = true
+		
+func _input(event: InputEvent) -> void:
+	# if exit button is pressed then exit the game
+	if event.is_action_pressed("exit"):
+		get_tree().quit()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

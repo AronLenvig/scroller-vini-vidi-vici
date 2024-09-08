@@ -18,3 +18,10 @@ func _on_Leave_tut_pressed() -> void:
 
 func _on_to_tut_pressed() -> void:
 	tut.visible = true
+
+
+func _on_start_button_mobile() -> void:
+	Global.is_mobile = true
+	Transition.transition()
+	await Transition.on_tansition_finished
+	get_tree().change_scene_to_file("res://Sceans/intro_cutscenes.tscn")
