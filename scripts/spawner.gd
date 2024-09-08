@@ -2,6 +2,7 @@ extends Node2D
 
 var add_point_node = preload("res://Sceans/add_point.tscn")
 var wall_node = preload("res://Sceans/wall.tscn")
+var wall_node_h = preload("res://Sceans/wall_h.tscn")
 
 var time_passed: float = 0.0
 var increment_interval: float = 3.0
@@ -12,13 +13,16 @@ var lable_funct = [
 	["x 2", "ganga2", false],
 	["÷ 2", "div2", true],
 	["-69", "sub69", true],
-	["cleo", "cleo", false]
+	["cleo", "cleo", false],
 ]
 
 var buble_list = [
 	"douple_bubble",
 	"douple_buble_with_wall",
 	"bubble_wave",
+	"bubble_wave_reverse",
+	"douple_buble_front_walls",
+	"douple_buble_back_walls",
 ]
 
 # Called when the node enters the scene tree for the first time.
@@ -34,20 +38,35 @@ func _process(delta: float) -> void:
 		time_passed = 0.0
 		
 func douple_bubble():
-	spawn_point_gain(Vector2(120,0))
-	spawn_point_gain(Vector2(-140,0))
+	spawn_point_gain(Vector2(120,0), 1.4)
+	spawn_point_gain(Vector2(-140,0), 1.4)
 	
 func douple_buble_with_wall():
-	spawn_point_gain(Vector2(120,0))
-	spawn_wall(Vector2(0,-100))
-	spawn_point_gain(Vector2(-140,0))
+	spawn_point_gain(Vector2(150,0), 1.2)
+	spawn_wall(Vector2(-20,-150))
+	spawn_point_gain(Vector2(-150,0), 1.2)
+	
+func douple_buble_front_walls():
+	spawn_point_gain(Vector2(150,0))
+	spawn_wall_h(Vector2(280, 150))
+	spawn_point_gain(Vector2(-150,0))
+	spawn_wall_h(Vector2(-115, 150))
+	
+func douple_buble_back_walls():
+	spawn_point_gain(Vector2(150,0))
+	spawn_wall_h(Vector2(280, -150))
+	spawn_point_gain(Vector2(-150,0))
+	spawn_wall_h(Vector2(-115, -150))
 	
 func bubble_wave():
-	spawn_point_gain(Vector2(200, -200), 0.7)
-	spawn_point_gain(Vector2(100, -100), 0.7)
+	spawn_point_gain(Vector2(200, -100), 0.7)
 	spawn_point_gain(Vector2(0, 0), 0.7)
-	spawn_point_gain(Vector2(-100, 100), 0.7)
-	spawn_point_gain(Vector2(-200, 200), 0.7)
+	spawn_point_gain(Vector2(-200, 100), 0.7)
+	
+func bubble_wave_reverse():
+	spawn_point_gain(Vector2(200, 100), 0.7)
+	spawn_point_gain(Vector2(0, 0), 0.7)
+	spawn_point_gain(Vector2(-200, -100), 0.7)
 
 func spawn_point_gain(pos: Vector2, scale: float = 1.0):
 	var point_instance = add_point_node.instantiate()
@@ -68,6 +87,10 @@ func spawn_wall(pos: Vector2):
 	wall_instance.position = pos
 	add_child(wall_instance)
 	
+func spawn_wall_h(pos: Vector2):
+	var wall_instance = wall_node_h.instantiate()
+	wall_instance.position = pos
+	add_child(wall_instance)
 
 func add100():
 	Global.soldiers += 100

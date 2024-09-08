@@ -1,8 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bcswc8q612y05"]
+[gd_scene load_steps=3 format=3 uid="uid://djmbr2y1rtctk"]
 
-[ext_resource type="Script" path="res://death_screen.gd" id="1_o66pb"]
+[ext_resource type="Script" path="res://death_screen.gd" id="1_bicjb"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_mitwq"]
+[sub_resource type="LabelSettings" id="LabelSettings_mlsqc"]
 font_size = 96
 
 [node name="Control" type="Control"]
@@ -10,9 +10,11 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = -2.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_o66pb")
+script = ExtResource("1_bicjb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
@@ -25,6 +27,7 @@ offset_bottom = 1151.0
 text = "Reset"
 
 [node name="Quit" type="Button" parent="."]
+layout_mode = 0
 offset_left = 220.0
 offset_top = 1009.0
 offset_right = 372.0
@@ -32,14 +35,13 @@ offset_bottom = 1066.0
 text = "Quit"
 
 [node name="Label" type="Label" parent="."]
-modulate = Color(1, 0.168627, 0.0862745, 0.823529)
-layout_mode = 0
+modulate = Color(0.200664, 0.660397, 7.70092e-07, 0.823529)
 offset_left = 96.0
-offset_top = 75.0
+offset_top = 77.0
 offset_right = 492.0
-offset_bottom = 207.0
-text = "You Lost"
-label_settings = SubResource("LabelSettings_mitwq")
+offset_bottom = 209.0
+text = "You Win"
+label_settings = SubResource("LabelSettings_mlsqc")
 horizontal_alignment = 1
 
 [connection signal="pressed" from="Reset" to="." method="_on_button_pressed"]

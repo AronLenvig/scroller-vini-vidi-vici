@@ -13,9 +13,6 @@
 [ext_resource type="Script" path="res://Sceans/background_2.gd" id="11_15ilf"]
 [ext_resource type="Script" path="res://Sceans/background_3.gd" id="12_gmxuc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_blslf"]
-size = Vector2(25, 1200)
-
 [sub_resource type="LabelSettings" id="LabelSettings_wv12q"]
 font_size = 32
 font_color = Color(0, 0, 0, 1)
@@ -33,25 +30,12 @@ font_color = Color(0, 0, 0, 1)
 font_size = 26
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_blslf"]
+size = Vector2(25, 1200)
+
 [node name="main" type="Node2D"]
+z_index = 1
 script = ExtResource("1_3ws5d")
-
-[node name="left_wall" type="StaticBody2D" parent="."]
-position = Vector2(0, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="left_wall"]
-position = Vector2(2.5, 600)
-shape = SubResource("RectangleShape2D_blslf")
-
-[node name="right_wall" type="StaticBody2D" parent="."]
-position = Vector2(594, 3)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="right_wall"]
-position = Vector2(2.5, 600)
-shape = SubResource("RectangleShape2D_blslf")
-
-[node name="julius_ceasar" parent="." instance=ExtResource("2_6ixn7")]
-position = Vector2(302, 1012)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -60,6 +44,7 @@ offset_right = 607.0
 offset_bottom = 1209.0
 
 [node name="soilders_count" type="Label" parent="Control"]
+z_index = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -79,6 +64,7 @@ vertical_alignment = 1
 script = ExtResource("3_7x8em")
 
 [node name="cleopatra_count" type="Label" parent="Control"]
+z_index = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -97,6 +83,7 @@ horizontal_alignment = 1
 script = ExtResource("4_3s66u")
 
 [node name="timer" type="Label" parent="Control"]
+z_index = 1
 layout_mode = 0
 offset_left = 100.0
 offset_top = 70.0
@@ -109,6 +96,7 @@ script = ExtResource("6_iqk2k")
 
 [node name="Label" type="Label" parent="Control"]
 modulate = Color(1, 1, 1, 0.658824)
+z_index = 1
 layout_mode = 0
 offset_left = 217.0
 offset_top = 34.0
@@ -116,6 +104,23 @@ offset_right = 334.0
 offset_bottom = 70.0
 text = "Time Left"
 label_settings = SubResource("LabelSettings_yr01d")
+
+[node name="left_wall" type="StaticBody2D" parent="."]
+position = Vector2(0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left_wall"]
+position = Vector2(2.5, 600)
+shape = SubResource("RectangleShape2D_blslf")
+
+[node name="right_wall" type="StaticBody2D" parent="."]
+position = Vector2(594, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right_wall"]
+position = Vector2(2.5, 600)
+shape = SubResource("RectangleShape2D_blslf")
+
+[node name="julius_ceasar" parent="." instance=ExtResource("2_6ixn7")]
+position = Vector2(302, 1012)
 
 [node name="Spawner" type="Node2D" parent="."]
 position = Vector2(303, -62)
