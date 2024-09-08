@@ -24,6 +24,8 @@ Transition="*res://Sceans/transition.tscn"
 
 window/size/viewport_width=600
 window/size/viewport_height=1200
+window/stretch/mode="canvas_items"
+window/vsync/vsync_mode=0
 
 [global_group]
 
