@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pm54b"]
 size = Vector2(421, 113)
 
-[node name="Node2D" type="Node2D" groups=["Enemy"]]
+[node name="soldier_wall" type="Node2D" groups=["Enemy"]]
 script = ExtResource("1_xjort")
 
 [node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
