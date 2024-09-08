@@ -17,7 +17,7 @@ func spawn_point_gain(pos: Vector2):
 	var point_instance = add_point_node.instantiate()
 	#add_point_node.positions = pos
 	point_instance.position = pos
-	add_child(point_instance)
+	add_sibling(point_instance)
 
 func _physics_process(delta: float) -> void:
 		
@@ -25,7 +25,7 @@ func _physics_process(delta: float) -> void:
 	# handle movement
 	if can_shoot <= 0.0:
 		if Input.is_action_pressed("forward"):
-			spawn_point_gain(Vector2(0,0))
+			spawn_point_gain(position)
 			can_shoot = 0.5
 	else:
 		can_shoot -= delta

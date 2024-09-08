@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cba6ogxcwn1rl" path="res://picturs/ceaser0.png" id="4_3dw2x"]
 [ext_resource type="Texture2D" uid="uid://dfj5u8qewadhd" path="res://picturs/ceaser2.png" id="5_pcc8v"]
 [ext_resource type="Texture2D" uid="uid://blmyh68k7pm7t" path="res://picturs/soilder_logo.png" id="6_l5dpv"]
-[ext_resource type="PackedScene" uid="uid://ts5yyuv8mtvb" path="res://back_soilder.tscn" id="7_om8l6"]
+[ext_resource type="PackedScene" path="res://back_soilder.tscn" id="7_om8l6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_etkox"]
 radius = 26.0192
