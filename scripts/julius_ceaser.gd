@@ -6,8 +6,11 @@ var add_point_node = preload("res://soldier_bullet.tscn")
 @export var jump_strength := -500
 @onready var animation_player = $AnimationPlayer
 var can_shoot = 0.0
-
 var starting_y = null
+
+var soilder_follower = preload("res://back_soilder.tscn")
+var last_soilder = 0
+var followeres = 2
 
 func _ready() -> void:
 	animation_player.play("walk")
@@ -17,9 +20,25 @@ func spawn_point_gain(pos: Vector2):
 	var point_instance = add_point_node.instantiate()
 	#add_point_node.positions = pos
 	point_instance.position = pos
-	add_sibling(point_instance)
-
+	add_child(point_instance)
+	print("spawn_point_gain")
+	
+func add_follower(pos: Vector2, flip_h: bool = false):
+	var follower = soilder_follower.instantiate()
+	follower.position = pos
+	follower.flip_h = flip_h
+	add_child(follower)
+	print("add follow")
+	pass
+ 
 func _physics_process(delta: float) -> void:
+	if last_soilder != Global.soldiers:
+		print("update")
+		followeres = int(Global.soldiers / 100)
+			#for i in range(followeres):
+				#add_follower(Vector2(25, 50), false )
+				#add_follower(Vector2(-25, 50), true )
+			#pass
 		
 	var direction := Vector2.ZERO
 	# handle movement
@@ -44,4 +63,5 @@ func _physics_process(delta: float) -> void:
 		get_tree().change_scene_to_file("res://death_screen.tscn")
 		
 	# when hitting the wall ignore
+	last_soilder = Global.soldiers
 	move_and_slide()

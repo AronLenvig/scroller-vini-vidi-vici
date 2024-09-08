@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://c8pivujqfxfma"]
+[gd_scene load_steps=18 format=3 uid="uid://c8pivujqfxfma"]
 
 [ext_resource type="Script" path="res://scripts/intro_cutscene.gd" id="1_2g20n"]
 [ext_resource type="Texture2D" uid="uid://7kspsop4yaxa" path="res://picturs/Cesar_normal.png" id="2_ycc8w"]
 [ext_resource type="Texture2D" uid="uid://dle5yvj63u3j8" path="res://picturs/looka_out_window.PNG" id="3_7bohb"]
+[ext_resource type="AudioStream" uid="uid://dxavfr6l1y5cq" path="res://audio/uncut/hmm.wav" id="4_nx5ro"]
 [ext_resource type="Texture2D" uid="uid://b12ukdy4a2ttl" path="res://picturs/Untitled275.png" id="4_xaeya"]
 [ext_resource type="Texture2D" uid="uid://c2gny01jby14h" path="res://picturs/Untitled274.png" id="5_g0g67"]
 [ext_resource type="Texture2D" uid="uid://cmfm0ow7j508l" path="res://picturs/Untitled273.png" id="6_t6nkr"]
@@ -229,8 +230,12 @@ tracks/6/keys = {
 "end_offset": 0.0,
 "start_offset": 0.0,
 "stream": ExtResource("7_76c1f")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_nx5ro")
 }],
-"times": PackedFloat32Array(3)
+"times": PackedFloat32Array(3, 6.4)
 }
 tracks/6/use_blend = true
 
@@ -331,3 +336,6 @@ label_settings = SubResource("LabelSettings_7jqci")
 horizontal_alignment = 1
 
 [node name="Paper-enter-0" type="AudioStreamPlayer" parent="."]
+
+[node name="Hmm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_nx5ro")
