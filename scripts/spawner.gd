@@ -7,13 +7,18 @@ var enemy_node = preload("res://enemy_soldier.tscn")
 var enemy_node_w = preload("res://Soldier_wall.tscn")
 
 var time_passed: float = 0.0
-var increment_interval: float = 3.0
+var increment_interval: float = 2.5
 
 var lable_funct = [
+	["+1000", "add1000", false],
+	["-1000", "add1000", true],
+	["÷ 10", "div10", true],
 	["+100", "add100", false],
 	["-100", "sub100", true],
 	["x 2", "ganga2", false],
+	["x 1.5", "ganga1_5", false],
 	["÷ 2", "div2", true],
+	["÷ 4", "div4", true],
 	["-69", "sub69", true],
 	["cleo", "cleo", false],
 ]
@@ -25,6 +30,7 @@ var buble_list = [
 	"bubble_wave_reverse",
 	"douple_buble_front_walls",
 	"douple_buble_back_walls",
+	"wall_obstical",
 ]
 
 # Called when the node enters the scene tree for the first time.
@@ -48,6 +54,14 @@ func douple_buble_with_wall():
 	spawn_point_gain(Vector2(150,0), 1.2)
 	spawn_wall(Vector2(-20,-150))
 	spawn_point_gain(Vector2(-150,0), 1.2)
+	
+func wall_obstical():
+	spawn_wall_h(Vector2(280, -150))
+	spawn_wall_h(Vector2(120, -150))
+	
+	spawn_wall_h(Vector2(-115, 150))
+	spawn_wall_h(Vector2(0, 150))
+	
 	
 func douple_buble_front_walls():
 	spawn_point_gain(Vector2(150,0))
@@ -112,14 +126,35 @@ func add100():
 func sub100():
 	Global.soldiers -= 100
 	
+func add1000():
+	Global.soldiers += 1000
+	
+func sub1000():
+	Global.soldiers -= 1000
+	
 func ganga2():
 	Global.soldiers = Global.soldiers * 2
+	
+func ganga1_5():
+	Global.soldiers = int(Global.soldiers * 1.5)
 	
 func div2():
 	if Global.soldiers == 0:
 		Global.soldiers = 0
 	else:
 		Global.soldiers = Global.soldiers / 2
+		
+func div4():
+	if Global.soldiers == 0:
+		Global.soldiers = 0
+	else:
+		Global.soldiers = Global.soldiers / 4
+
+func div10():
+	if Global.soldiers == 0:
+		Global.soldiers = 0
+	else:
+		Global.soldiers = Global.soldiers / 10
 	
 func sub69():
 	Global.soldiers -= 69

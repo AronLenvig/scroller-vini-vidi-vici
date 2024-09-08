@@ -21,7 +21,6 @@ func _ready() -> void:
 		victory_reweld = false
 	
 func update_score() -> void:
-	Global.soldiers = 5000
 	var shown_score = 0
 	var shown_kleo = 0
 	while shown_score < Global.soldiers:
