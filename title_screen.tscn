@@ -102,7 +102,7 @@ text = "Leave Tuturial"
 
 [connection signal="pressed" from="start_mobile" to="." method="_on_start_mobile_pressed"]
 [connection signal="pressed" from="StartButton" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="QuitButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="QuitButton2" to="." method="_on_introduction_2_pressed"]
 [connection signal="pressed" from="ColorRect/Button" to="." method="_on_Leave_tut_pressed"]

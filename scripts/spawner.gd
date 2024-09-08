@@ -28,6 +28,8 @@ var lable_funct = [
 
 var buble_list = [
 	"douple_bubble",
+	"douple_bubble",
+	"douple_buble_with_wall",
 	"douple_buble_with_wall",
 	"bubble_wave",
 	"bubble_wave_reverse",
@@ -62,17 +64,12 @@ func douple_buble_with_wall():
 func wall_obstical():
 	spawn_wall_h(Vector2(280, -150))
 	spawn_wall_h(Vector2(120, -150))
-	
 	spawn_wall_h(Vector2(-115, 150))
-
 	
 func wall_obstical_reverse():
 	spawn_wall_h(Vector2(280, 150))
-	spawn_wall_h(Vector2(120, -150))
-	
+	spawn_wall_h(Vector2(60, -150))
 	spawn_wall_h(Vector2(-115, -150))
-
-	
 	
 func douple_buble_front_walls():
 	spawn_point_gain(Vector2(150,0))
