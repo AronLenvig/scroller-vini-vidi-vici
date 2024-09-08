@@ -4,6 +4,7 @@ var add_point_node = preload("res://Sceans/add_point.tscn")
 var wall_node = preload("res://Sceans/wall.tscn")
 var wall_node_h = preload("res://Sceans/wall_h.tscn")
 var enemy_node = preload("res://enemy_soldier.tscn")
+var enemy_node_w = preload("res://Soldier_wall.tscn")
 
 var time_passed: float = 0.0
 var increment_interval: float = 3.0
@@ -41,7 +42,7 @@ func _process(delta: float) -> void:
 func douple_bubble():
 	spawn_point_gain(Vector2(120,0), 1.4)
 	spawn_point_gain(Vector2(-140,0), 1.4)
-	spawn_enemy(Vector2(0,150))
+	spawn_enemy_w(Vector2(0,150))
 	
 func douple_buble_with_wall():
 	spawn_point_gain(Vector2(150,0), 1.2)
@@ -96,6 +97,12 @@ func spawn_wall_h(pos: Vector2):
 	
 func spawn_enemy(pos: Vector2):
 	var enemy_instance = enemy_node.instantiate()
+	enemy_instance.position = pos
+	add_child(enemy_instance)
+	
+	
+func spawn_enemy_w(pos: Vector2):
+	var enemy_instance = enemy_node_w.instantiate()
 	enemy_instance.position = pos
 	add_child(enemy_instance)
 	
