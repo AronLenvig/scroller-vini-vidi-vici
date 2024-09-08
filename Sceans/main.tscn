@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://scripts/cleopatra_count.gd" id="4_3s66u"]
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="4_qkqte"]
 [ext_resource type="Script" path="res://Sceans/timer.gd" id="6_iqk2k"]
-[ext_resource type="AudioStream" uid="uid://c7yk3bsftpw00" path="res://audio/Blonde.mp3" id="7_7nwj7"]
+[ext_resource type="AudioStream" uid="uid://c83jekb7807vf" path="res://audio/ksl-0.1.0/theme-loop-0.wav" id="7_d48cj"]
 [ext_resource type="Script" path="res://scripts/audio_stream_player.gd" id="8_tclwt"]
 [ext_resource type="Texture2D" uid="uid://cwe35tdhh3gty" path="res://picturs/floor.PNG" id="9_gvu7v"]
 [ext_resource type="Script" path="res://scripts/background.gd" id="10_2vlhp"]
@@ -127,7 +127,7 @@ position = Vector2(303, -62)
 script = ExtResource("4_qkqte")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_7nwj7")
+stream = ExtResource("7_d48cj")
 autoplay = true
 script = ExtResource("8_tclwt")
 
