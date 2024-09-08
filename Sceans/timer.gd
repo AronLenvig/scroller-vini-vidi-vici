@@ -9,9 +9,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Global.timer > play_time:
-		if Global.soldiers < 4000:
-			get_tree().change_scene_to_file("res://death_screen.tscn")
-		else:
-			get_tree().change_scene_to_file("res://win_screen.tscn")
 	text = "%.1f" % (play_time - Global.timer)

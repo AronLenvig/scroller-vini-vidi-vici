@@ -19,5 +19,13 @@ func start_introcutscean():
 	#ToDO space to move between scenes
 	
 func _ready() -> void:
+	reset_values()
 	start_introcutscean()
+	
+func reset_values():
+	Global.game_start = false
+	Global.timer = 0.0
+	Global.soldiers = 100
+	Global.game_speed = 200
+	pass
 	

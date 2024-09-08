@@ -7,8 +7,11 @@ var add_point_node = preload("res://soldier_bullet.tscn")
 @onready var animation_player = $AnimationPlayer
 var can_shoot = 0.0
 
+var starting_y = null
+
 func _ready() -> void:
 	animation_player.play("walk")
+	starting_y = position.y
 
 func spawn_point_gain(pos: Vector2):
 	var point_instance = add_point_node.instantiate()
@@ -37,6 +40,12 @@ func _physics_process(delta: float) -> void:
 	
 	velocity.x = direction.x * speed
 	#velocity.y = direction.y * speed
+	
+	var new_y = position.y
+	
+	if new_y != starting_y:
+		get_tree().change_scene_to_file("res://death_screen.tscn")
+		
 	
 	# when hitting the wall ignore
 	move_and_slide()
