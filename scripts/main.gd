@@ -5,8 +5,10 @@ var ceaser_soldiers: int = 100
 var player_score: int = 0
 
 func _ready() -> void:
-	var m_type = OS.get_name()
-	if m_type != "macOS" or m_type != "windows":
+	var diskArr = ["macos", "windows", "linux"]
+	
+	print(OS.get_name())
+	if !diskArr.has(OS.get_name().to_lower()):
 		$MobileCanvas.visible = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
