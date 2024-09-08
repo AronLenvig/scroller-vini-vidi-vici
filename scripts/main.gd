@@ -5,9 +5,12 @@ var ceaser_soldiers: int = 100
 var player_score: int = 0
 
 func _ready() -> void:
-	var diskArr = ["macos", "windows", "linux"]
+	var diskArr = ["macos", "windows", "linux", "web"]
 	
 	print(OS.get_name())
+	print(OS.get_processor_name())
+	print(OS.get_process_id())
+	
 	if !diskArr.has(OS.get_name().to_lower()):
 		$MobileCanvas.visible = true
 
