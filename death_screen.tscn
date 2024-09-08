@@ -55,5 +55,5 @@ scale = Vector2(0.576172, 0.576172)
 texture = ExtResource("3_buq4y")
 
 [connection signal="pressed" from="Reset" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_button_pressed"]

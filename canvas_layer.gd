@@ -21,6 +21,7 @@ func _ready() -> void:
 		victory_reweld = false
 	
 func update_score() -> void:
+	Global.soldiers = 5000
 	var shown_score = 0
 	var shown_kleo = 0
 	while shown_score < Global.soldiers:
@@ -36,6 +37,7 @@ func update_score() -> void:
 	
 	if victory_reweld:
 		$JuliusVictory.visible = true
+		$story_label.text = "You saw their army as you arrived, came without hesitation, and conquered them in an instant as they fled the battlefield."
 		$Label.text = "veni, vidi, vici"
 		if Global.cleopatras >= 5:
 			await get_tree().create_timer(2).timeout
@@ -44,6 +46,7 @@ func update_score() -> void:
 			get_tree().change_scene_to_file("res://cleopatra_scene.tscn")
 	else:
 		$Label.text = "Defeat! too few men"
+		$story_label.text = "Your forces were too small, and the enemy overwhelmed them. Next time, bring at least 4,000 men."
 		$JuliusDefeat.visible = true
 		pass
 
