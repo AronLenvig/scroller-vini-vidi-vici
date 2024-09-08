@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1725810966|2915781048';
+const CACHE_VERSION = '1725811347|61851231970';
 /** @type {string} */
 const CACHE_PREFIX = 'Scroller vini vi-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
